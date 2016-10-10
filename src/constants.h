@@ -1,41 +1,10 @@
 #ifndef HEADERS_H
 #define HEADERS_H
 
+#define PORT_NUMBER 10003
 
-
-
-
-
-
-
-
-
-
-
-
-#define PORT_NUMBER 10000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#define DEFAULT_RECEIVE_SIZE 3000
-#define DEFAULT_SEND_SIZE 3000 
+#define DEFAULT_RECEIVE_SIZE 2000
+#define DEFAULT_SEND_SIZE 2000
 #define INPUT_BUFFER_SIZE 128
 
 #define DEFAULT_LOG_FILE "log.txt"
