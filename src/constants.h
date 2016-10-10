@@ -1,20 +1,60 @@
 #ifndef HEADERS_H
 #define HEADERS_H
 
-#define DEFAULT_BUFFER_SIZE 10000
 
+
+
+
+
+
+
+
+
+
+
+
+#define PORT_NUMBER 10000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define DEFAULT_RECEIVE_SIZE 1000
+#define DEFAULT_SEND_SIZE 2000 
+#define INPUT_BUFFER_SIZE 128
 
 typedef struct {
 unsigned cmd;
 char *arg;
 } command;
+
+
+#define noMoreCommands (0)
 #define nullTerminatedCmd (1)
 #define givenLengthCmd (2)
 #define badIntCmd (3)
 #define goodIntCmd (4)
 #define byteAtATimeCmd (5)
 #define kByteAtATimeCmd (6)
-#define noMoreCommands (0)
+
+
+
+#define NUMBER_OF_COMMANDS (7)
 /* This is the list of commands to be run by the client to demonstrate your program */
 static command commands[] = {
 {nullTerminatedCmd, "Sent as a null-terminated string"},
