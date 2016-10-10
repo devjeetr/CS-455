@@ -9,7 +9,10 @@
 #include "constants.h"
 #include "utilities.c"
 #include <unistd.h>
+    #include <signal.h>
 #define MESSAGE_INDEX (2)
+
+
 
 
 void buildResponse(char * output, int outSize, char * commandName, char * receivedValue){
@@ -21,14 +24,127 @@ void buildResponse(char * output, int outSize, char * commandName, char * receiv
     strcpy(&output[strlen(output)], receivedValue);
 
 }
+
+/*--------------------------------------------------------------
+|  Function bufferedRecieve
+|   
+|  receives atleast nMinBytesToBeRead from given socket
+|  also logs whatever data was received
+|  returns number of bytes read from socket
+|  
+|  
+*-------------------------------------------------------------------*/
+
+int bufferedRecieve(int nMinBytesToBeRead, FILE * logFile, int socket, char * inputBuffer, int inputBufferSize, int flags){
     
+    int nBytesReceived = 0;
+
+    while(nBytesReceived < nMinBytesToBeRead){
+        // attempt to fill the input buffer, but if not read whatever can be read
+        // and read the rest in future iterations 
+        nBytesReceived += loggedRecieve(logFile, socket, &inputBuffer[nBytesReceived], 
+            inputBufferSize - nBytesReceived, flags);
+    }
+
+    return nBytesReceived;
+}
+
+/*--------------------------------------------------------------
+|  Function bufferedRecieve
+|   
+|  keeps receiving from socket until it receives a null character
+|  also logs whatever data was received
+|  returns number of bytes read from socket
+*-------------------------------------------------------------------*/
+
+int nullTerminatedRecieve(int nMinBytesToBeRead, FILE * logFile, int socket, char * inputBuffer, int inputBufferSize, int flags){
+   
+    int nBytesReceived = 0;
+
+    while(nBytesReceived < nMinBytesToBeRead){
+        // attempt to fill the input buffer, but if not read whatever can be read
+        // and read the rest in future iterations 
+        nBytesReceived += loggedRecieve(logFile, socket, &inputBuffer[nBytesReceived], 
+            inputBufferSize - nBytesReceived, flags);
+
+
+    }
+
+    return nBytesReceived;
+
+
+}
+
+
+
+/*--------------------------------------------------------------
+|  Function loggedRecieve
+|  
+|  receives available data from given socket
+|  logs whatever data was received
+|  returns number of bytes read from socket
+*-------------------------------------------------------------------*/
+int loggedRecieve(FILE * logFile, int socket, char * inputBuffer, int inputBufferSize, int flags){
+
+    memset(inputBuffer, 0, inputBufferSize);
+    printf("input buffer size: %d\n\n", inputBufferSize);
+    int read_size = recv(socket, inputBuffer , inputBufferSize , flags);
+
+    
+    for(int i = 0; i < read_size; i++){
+        fputc(inputBuffer[i], logFile);
+    }
+
+    return read_size;
+} 
+
+
+int managedSend(int socket, char * sendBuffer, int sendBufferSize, int bytesToSend, int flags)  {
+    int nBytesSent = 0;
+    printf("MANAGed\n");
+    while(nBytesSent < bytesToSend){    
+        nBytesSent += send(socket, sendBuffer + nBytesSent, bytesToSend - nBytesSent, flags);
+
+    }
+
+    return nBytesSent;
+}
+
+
+
+FILE * log_file;
+int socket_desc;
+
+static volatile int keepRunning = 1;
+
+void ctrCHandler(int dummy){
+
+    //close file
+    keepRunning = 0;
+    printf("Inside Handler\n");
+    fclose(log_file);
+    close(socket_desc);
+    exit(0);
+}
 
 int main(int argc , char *argv[])
 {
-    int socket_desc , client_sock , c , read_size;
+    int client_sock , c , read_size;
     struct sockaddr_in server , client;
     char client_message[DEFAULT_RECEIVE_SIZE];
     char response_message[DEFAULT_SEND_SIZE];
+
+    signal(SIGINT, ctrCHandler);
+    
+    if(argc > 1){
+        log_file = fopen(argv[1], "w+");
+    }else{
+        printf("log file not provided in args, using default: %s\n", DEFAULT_LOG_FILE);
+        log_file = fopen(DEFAULT_LOG_FILE, "w+");
+    }
+
+
+    
 
     //Create socket
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
@@ -55,7 +171,7 @@ int main(int argc , char *argv[])
     //Listen
     listen(socket_desc , 3);
     
-    while(1){ 
+    while(keepRunning){ 
         //Accept and incoming connection
         puts("Waiting for incoming connections...");
         c = sizeof(struct sockaddr_in);
@@ -68,15 +184,17 @@ int main(int argc , char *argv[])
             return 1;
         }
         puts("Connection accepted");
-        memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
 
-        // Receive response from client
-        read_size = recv(client_sock , client_message , DEFAULT_RECEIVE_SIZE , 0);
+        
+        // TODO Receive response from client
+
+        read_size = loggedRecieve(log_file, client_sock, client_message, DEFAULT_RECEIVE_SIZE, 0);
+
+        printf("Initial recv, received %d bytes\n", read_size);
+
 
         if(read_size == 0)
             break;
-        else
-            printf("%d bytes recvd\n", read_size);
 
         // extract command number
         uint16_t command;
@@ -94,22 +212,31 @@ int main(int argc , char *argv[])
         //=================================================
         //  Process each command down below
         //=================================================
+
+        //=================================================
+        //  Null Terminated Command
+        //
+        //=================================================
         if(command == nullTerminatedCmd){
             
             // input string is already null terminated so don't need to
             // do any additional processing
 
             // build response
-            buildResponse(response_message, DEFAULT_SEND_SIZE, commandNames[command], &client_message[MESSAGE_INDEX]);
+            buildResponse(response_message + sizeof(uint16_t), DEFAULT_SEND_SIZE - sizeof(uint16_t), 
+                commandNames[command], &client_message[MESSAGE_INDEX]);
             
             // calculate response length
-            uint16_t len = htons(strlen(response_message));
+            uint16_t len = htons(strlen(response_message + sizeof(uint16_t)));
 
-            //TODO: store 'len' in first 2 bytes of response_message
+            // store 'len' in first 2 bytes of response_message
+            memcpy(response_message, &len, sizeof(uint16_t));
 
+            printf("sending response");
             // send back response
-            write(client_sock , response_message , strlen(response_message));
+            int sent = managedSend(client_sock , response_message , DEFAULT_SEND_SIZE, strlen(response_message + sizeof(uint16_t)) + + sizeof(uint16_t), 0);
 
+            printf("%d bytes sent\n", sent);
             memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
             
              
@@ -129,17 +256,22 @@ int main(int argc , char *argv[])
             // build response
             // client_message[MESSAGE_INDEX + 2]
             //          +2-> accounts for length before command string
-            buildResponse(response_message, DEFAULT_SEND_SIZE, 
+            buildResponse(response_message + sizeof(uint16_t), DEFAULT_SEND_SIZE - sizeof(uint16_t), 
                 commandNames[command], 
                 &client_message[MESSAGE_INDEX + 2]);
             
             // calculate response length
-            uint16_t len = htons(strlen(response_message));
+            uint16_t len = htons(strlen(response_message + sizeof(uint16_t)));
 
-            //TODO: store 'len' in first 2 bytes of response_message
+            // store 'len' in first 2 bytes of response_message
+            memcpy(response_message, &len, sizeof(uint16_t));
 
-            // send back response
-            write(client_sock , response_message , strlen(response_message));
+            int sent = managedSend(client_sock , response_message , DEFAULT_SEND_SIZE, strlen(response_message + sizeof(uint16_t)) + + sizeof(uint16_t), 0);
+            if(sent <= 0){
+                printf("Send failed");
+                break;
+            }
+
 
             memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
 
@@ -153,15 +285,21 @@ int main(int argc , char *argv[])
             sprintf(&client_message[MESSAGE_INDEX], "%d", intCmd);
 
             // build response
-            buildResponse(response_message, DEFAULT_SEND_SIZE, commandNames[command], &client_message[MESSAGE_INDEX]);
+            buildResponse(response_message + sizeof(uint16_t), DEFAULT_SEND_SIZE - sizeof(uint16_t), 
+                commandNames[command], &client_message[MESSAGE_INDEX]);
             
             // calculate response length
-            uint16_t len = htons(strlen(response_message));
+            uint16_t len = htons(strlen(response_message + sizeof(uint16_t)));
 
             //TODO: store 'len' in first 2 bytes of response_message
+            memcpy(response_message, &len, sizeof(uint16_t));
 
             // send back response
-            write(client_sock , response_message , strlen(response_message));
+            int sent = managedSend(client_sock , response_message , DEFAULT_SEND_SIZE, strlen(response_message + sizeof(uint16_t)) + + sizeof(uint16_t), 0);
+            if(sent <= 0){
+                printf("Send failed");
+                break;
+            }
 
             memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
 
@@ -182,26 +320,38 @@ int main(int argc , char *argv[])
             
 
             while( nBytesReceived < nBytes){
-                read_size = recv(client_sock , client_message , DEFAULT_RECEIVE_SIZE , 0);
+                read_size = loggedRecieve(log_file, client_sock , client_message , DEFAULT_RECEIVE_SIZE , 0);
 
-                printf("received %d bytes\n", read_size);
+                printf("received %d bytes, total received: %d\n", read_size, nBytesReceived);
 
                 recvTimes++;
                 nBytesReceived += read_size;
 
             }
 
-            printf("received %d times\n", recvTimes);
+            printf("recd %d times, total bytes received: %d\n", recvTimes, nBytesReceived);
+
+            sprintf(&client_message[MESSAGE_INDEX], "%d", recvTimes);
+
+            // build response
+            buildResponse(response_message + sizeof(uint16_t), DEFAULT_SEND_SIZE - sizeof(uint16_t), 
+                commandNames[command], &client_message[MESSAGE_INDEX]);
+            
+            // calculate response length
+            uint16_t len = htons(strlen(response_message + sizeof(uint16_t)));
+
+            //TODO: store 'len' in first 2 bytes of response_message
+            memcpy(response_message, &len, sizeof(uint16_t));
+            // send back response
+            int sent = managedSend(client_sock , response_message , DEFAULT_SEND_SIZE, strlen(response_message + sizeof(uint16_t)) + + sizeof(uint16_t), 0);
+            if(sent <= 0){
+                printf("Send failed");
+                break;
+            }
+
+            memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
 
         }
-
-        //         #define noMoreCommands (0)
-// #define nullTerminatedCmd (1)
-// #define givenLengthCmd (2)
-// #define badIntCmd (3)
-// #define goodIntCmd (4)
-// #define byteAtATimeCmd (5)
-// #define kByteAtATimeCmd (6)
         
         if(read_size == 0)
         {
@@ -214,5 +364,7 @@ int main(int argc , char *argv[])
         }
             
     }
+    fclose(log_file);
+    close(socket);
     return 0;
 }

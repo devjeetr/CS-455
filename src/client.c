@@ -91,7 +91,6 @@ int main(int argc , char *argv[])
                     printf("Please enter command: ");
                     fgets(cmd, INPUT_BUFFER_SIZE, stdin);
                     cmd[strlen(cmd) - 1] = 0;
-                    printf("input: %s\n", cmd);
                     // printf("Sending message of length: %d\n", strlen(inputBuffer));
         
                     // Send some data
@@ -190,38 +189,28 @@ int main(int argc , char *argv[])
                     // apply nBlocksetwork ordering and copy
                     // to send buffer
                     
-                    int nBlocks = k / 1000;
-                    int currentVal = 0;
-                    printf("nBlocks: %d\n", nBlocks);
+                   
                     
+                    // send command + nBytes
                     send(sock, inputBuffer, sizeof(uint32_t) + sizeof(uint16_t), 0);
                     
-
-                    printf("about to send\n");
+                    int nBlocks = k / 1000;
+                    int remaining = k % 1000;
+                    int byteVal = 0;
                     
-                    for(int blockNum = 0; blockNum < nBlocks; blockNum++){
-                        currentVal = !currentVal;
-
-                        memset(inputBuffer, currentVal, 1000);
-
-                        int sendsize = send(sock , inputBuffer , 1000, 0) ;
-
-                        printf("%d bytes sent\n", sendsize);
-
-                        k -= 1000;
-                        printf("k: %d\n", k);
+                    for(int i = 0; i < nBlocks; i++){
+                        memset(&inputBuffer[1000 * i], byteVal, 1000);
+                        byteVal = !byteVal;
                     }
+                    memset(&inputBuffer[1000 * nBlocks], byteVal, remaining);
 
-                    printf("about to send rest %d bytes\n", k);
-                    currentVal = !currentVal;
-                    if(k > 0){
-                        printf("sending rest\n");
-                    //send remaining k bytes
-                        memset(inputBuffer, currentVal, k);
 
-                       send(sock , inputBuffer , k, 0);
+                    if(choice == byteAtATimeCmd){
+                        sendInKBlocks(sock, inputBuffer, k, 1);
+                    }else{
+                        sendInKBlocks(sock, inputBuffer, k, 1000);
                     }
-
+                    
                 }
         }
         printf("Waitinf for server reply\n");
@@ -233,16 +222,13 @@ int main(int argc , char *argv[])
         }
          
         puts("Server reply :");
-        puts(server_reply);
-        printf("\n");
-//         #define noMoreCommands (0)
-// #define nullTerminatedCmd (1)
-// #define givenLengthCmd (2)
-// #define badIntCmd (3)
-// #define goodIntCmd (4)
-// #define byteAtATimeCmd (5)
-// #define kByteAtATimeCmd (6)
 
+        // first 2 bytes is length
+        uint16_t len;
+        memcpy(&len, server_reply, sizeof(uint16_t));
+        len = ntohs(len);
+        printf("%d bytes: %s\n", len, server_reply + sizeof(uint16_t));
+        printf("\n");
 
 
 
@@ -262,5 +248,5 @@ void sendInKBlocks(int socket, char * data, int totalDataSize, int blockSize){
     }
 
     totalDataSize -= send(socket, data, totalDataSize, 0);
-    
+
 }

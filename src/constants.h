@@ -38,6 +38,8 @@
 #define DEFAULT_SEND_SIZE 3000 
 #define INPUT_BUFFER_SIZE 128
 
+#define DEFAULT_LOG_FILE "log.txt"
+
 typedef struct {
 unsigned cmd;
 char *arg;
