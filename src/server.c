@@ -8,7 +8,7 @@
 #include <unistd.h>    //write
 #include "constants.h"
 #include "utilities.c"
-
+#include <unistd.h>
 #define MESSAGE_INDEX (2)
 
 
@@ -75,6 +75,8 @@ int main(int argc , char *argv[])
 
         if(read_size == 0)
             break;
+        else
+            printf("%d bytes recvd\n", read_size);
 
         // extract command number
         uint16_t command;
@@ -149,7 +151,7 @@ int main(int argc , char *argv[])
             intCmd = ntohl(intCmd);
             printf("Int command: %d\n", intCmd);
             sprintf(&client_message[MESSAGE_INDEX], "%d", intCmd);
-            
+
             // build response
             buildResponse(response_message, DEFAULT_SEND_SIZE, commandNames[command], &client_message[MESSAGE_INDEX]);
             
@@ -163,6 +165,33 @@ int main(int argc , char *argv[])
 
             memset(client_message, 0, DEFAULT_RECEIVE_SIZE);
 
+
+        } else if(command == kByteAtATimeCmd || command == byteAtATimeCmd){
+
+            // extract nBytes
+            uint32_t nBytes;
+            memcpy(&nBytes, &client_message[MESSAGE_INDEX], sizeof(nBytes));
+            nBytes = ntohl(nBytes);
+            printf("nBytes: %d\n", nBytes);
+            sprintf(&client_message[MESSAGE_INDEX], "%d", nBytes);
+            int recvTimes = 1;
+  
+            printf("waiting to receive:\n");
+            int nBytesReceived = read_size - 6;
+
+            
+
+            while( nBytesReceived < nBytes){
+                read_size = recv(client_sock , client_message , DEFAULT_RECEIVE_SIZE , 0);
+
+                printf("received %d bytes\n", read_size);
+
+                recvTimes++;
+                nBytesReceived += read_size;
+
+            }
+
+            printf("received %d times\n", recvTimes);
 
         }
 

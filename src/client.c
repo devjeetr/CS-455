@@ -33,7 +33,7 @@ int getCommand(){
         printf("Enter choice: ");
         choice = readInt();
 
-        if(choice > 0 && choice < NUMBER_OF_COMMANDS )
+        if(choice > 0 && choice <= NUMBER_OF_COMMANDS )
             return --choice;
         else
             printf("Invalid choice. Please try again.");
@@ -165,9 +165,66 @@ int main(int argc , char *argv[])
                         return 1;
                     }
 
-                } 
-        }
+                } else if(choice == kByteAtATimeCmd || choice == byteAtATimeCmd){
+                    char * cmd = &inputBuffer[2];
+                    char * c;
+                    fflush(stdin);
 
+                    // input int command from user
+                    printf("Please n: ");
+                    fgets(cmd, INPUT_BUFFER_SIZE, stdin);
+                    cmd[strlen(cmd) - 1] = 0;
+
+                    // convert to integer
+                    int k = strtol(cmd, &c, 10);
+                    // apply network ordering,
+                    // copy to send buffer and
+                    // send
+                    uint32_t tmp = htonl(k);
+                    memcpy(&inputBuffer[2], &tmp, sizeof(uint32_t));
+                    // send command # and nBytes
+                    
+                    printf("k: %d\n", k );
+                    
+
+                    // apply nBlocksetwork ordering and copy
+                    // to send buffer
+                    
+                    int nBlocks = k / 1000;
+                    int currentVal = 0;
+                    printf("nBlocks: %d\n", nBlocks);
+                    
+                    send(sock, inputBuffer, sizeof(uint32_t) + sizeof(uint16_t), 0);
+                    
+
+                    printf("about to send\n");
+                    
+                    for(int blockNum = 0; blockNum < nBlocks; blockNum++){
+                        currentVal = !currentVal;
+
+                        memset(inputBuffer, currentVal, 1000);
+
+                        int sendsize = send(sock , inputBuffer , 1000, 0) ;
+
+                        printf("%d bytes sent\n", sendsize);
+
+                        k -= 1000;
+                        printf("k: %d\n", k);
+                    }
+
+                    printf("about to send rest %d bytes\n", k);
+                    currentVal = !currentVal;
+                    if(k > 0){
+                        printf("sending rest\n");
+                    //send remaining k bytes
+                        memset(inputBuffer, currentVal, k);
+
+                       send(sock , inputBuffer , k, 0);
+                    }
+
+                }
+        }
+        printf("Waitinf for server reply\n");
         //Receive a reply from the server
         if( recv(sock , server_reply , DEFAULT_RECEIVE_SIZE , 0) < 0)
         {
@@ -192,34 +249,18 @@ int main(int argc , char *argv[])
    
     }
 
-
-
-
-    //keep communicating with server
-    // while(1)
-    // {
-    //     memset(message, 0, DEFAULT_SEND_SIZE);
-    //     printf("Enter message : ");
-    //     scanf("%s" , message);
-         
-    //     //Send some data
-    //     if( send(sock , message , strlen(message) , 0) < 0)
-    //     {
-    //         puts("Send failed");
-    //         return 1;
-    //     }
-         
-    //     //Receive a reply from the server
-    //     if( recv(sock , server_reply , DEFAULT_RECEIVE_SIZE , 0) < 0)
-    //     {
-    //         puts("recv failed");
-    //         break;
-    //     }
-         
-    //     puts("Server reply :");
-    //     puts(server_reply);
-    // }
-     
     close(sock);
     return 0;
+}
+
+
+void sendInKBlocks(int socket, char * data, int totalDataSize, int blockSize){
+    int nBlocks = totalDataSize / blockSize;
+
+    while(nBlocks-- > 0){
+        totalDataSize -= send(socket, data++, blockSize, 0);
+    }
+
+    totalDataSize -= send(socket, data, totalDataSize, 0);
+    
 }
