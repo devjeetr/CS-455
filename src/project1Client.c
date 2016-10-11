@@ -1,10 +1,11 @@
-/*
-    C ECHO client example using sockets
-*/
+// Devjeet Roy
+// John Chen
+
+
 #include <stdio.h> //printf
 #include <string.h>    //strlen
-#include <sys/socket.h>    //socket
-#include <arpa/inet.h> //inet_addr
+#include <sys/socket.h>    
+#include <arpa/inet.h> 
 #include "constants.h"
 #include "client_handlers.c"
 
@@ -40,16 +41,25 @@ int getCommand(){
     }
 }
 
-// TODO: 
-//  Add command processing loop
-//
 
 int main(int argc , char *argv[])
 {
     int sock;
     struct sockaddr_in server;
     char message[DEFAULT_SEND_SIZE] , server_reply[DEFAULT_RECEIVE_SIZE];
-     
+    char * ip;
+    int port;
+
+    if(argc > 2){
+        char * c;
+        ip = argv[1];
+        port = strtol(argv[2], &c, 10);
+
+    }else{
+        printf("No port specified. Exiting\n");
+        exit(0);
+    }
+
     //Create socket
     sock = socket(AF_INET , SOCK_STREAM , 0);
     if (sock == -1)
@@ -58,9 +68,9 @@ int main(int argc , char *argv[])
     }
     puts("Socket created");
      
-    server.sin_addr.s_addr = inet_addr("127.0.0.1");
+    server.sin_addr.s_addr = inet_addr(ip);
     server.sin_family = AF_INET;
-    server.sin_port = htons( PORT_NUMBER );
+    server.sin_port = htons( port );
  
     //Connect to remote server
     if (connect(sock , (struct sockaddr *)&server , sizeof(server)) < 0)
@@ -94,7 +104,11 @@ int main(int argc , char *argv[])
 
         
         //copy arg
-        memcpy(inputBuffer + sizeof(uint16_t), commands[i].arg, strlen(commands[i].arg));
+        if(commands[i].cmd == givenLengthCmd){
+            memcpy(inputBuffer + sizeof(uint16_t) * 2, commands[i].arg, strlen(commands[i].arg));
+        }else{
+            memcpy(inputBuffer + sizeof(uint16_t), commands[i].arg, strlen(commands[i].arg));   
+        }
         // call handler from handler table
         if((*handlerPtrs[commands[i].cmd])(inputBuffer, sock) < 0){
             printf("Error in handler. Breaking!\n");
@@ -102,6 +116,8 @@ int main(int argc , char *argv[])
         }
 
         printf("Waiting for server reply\n");
+
+        memset(server_reply, 0, sizeof(server_reply)/sizeof(server_reply[0]));
         //Receive a reply from the server
         if( recv(sock , server_reply , DEFAULT_RECEIVE_SIZE , 0) < 0)
         {
@@ -110,7 +126,6 @@ int main(int argc , char *argv[])
         }
          
         puts("Server reply :");
-
         // first 2 bytes is length
         uint16_t len;
         memcpy(&len, server_reply, sizeof(uint16_t));

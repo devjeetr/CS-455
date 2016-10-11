@@ -13,7 +13,8 @@ typedef struct {
 unsigned cmd;
 char *arg;
 } command;
-
+// Devjeet Roy
+// John Chen
 
 #define noMoreCommands (0)
 #define nullTerminatedCmd (1)

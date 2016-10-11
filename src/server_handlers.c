@@ -1,3 +1,6 @@
+// Devjeet Roy
+// John Chen
+
 #include <string.h>    //strlen
 #include <sys/socket.h>
 #include <arpa/inet.h> //inet_addr
@@ -40,17 +43,22 @@ int bufferedRecieve(int nMinBytesToBeRead, FILE * logFile, int socket, char * in
 |  returns number of bytes read from socket
 *-------------------------------------------------------------------*/
 
-int nullTerminatedRecieve(int nMinBytesToBeRead, FILE * logFile, int socket, char * inputBuffer, int inputBufferSize, int flags){
+int nullTerminatedRecieve(FILE * logFile, int socket, char * inputBuffer, int inputBufferSize, int flags){
    
     int nBytesReceived = 0;
 
-    while(nBytesReceived < nMinBytesToBeRead){
+    while(1){
         // attempt to fill the input buffer, but if not read whatever can be read
         // and read the rest in future iterations 
-        nBytesReceived += loggedRecieve(logFile, socket, &inputBuffer[nBytesReceived], 
+        int read_size = loggedRecieve(logFile, socket, &inputBuffer[nBytesReceived], 
             inputBufferSize - nBytesReceived, flags);
-
-
+        int nullFound = 0;
+        
+        for(int i = nBytesReceived; i < read_size; i++){
+            if(inputBuffer[i] == 0) // null found, now return
+                return nBytesReceived + read_size;
+        }
+        nBytesReceived += read_size;
     }
     return nBytesReceived;
 }
@@ -112,6 +120,21 @@ int managedSend(int socket, char * sendBuffer, int sendBufferSize, int bytesToSe
 int handleNullTerminatedCmd(char * response_message, char * client_message, int sock, int command, int read_size){
     
     // TODO: check for null character and if it isn't present then recv more data
+    int nullFound = 0;
+    //i = 2, bytes 0 and 1 contain command# from client
+    for(int i = 2; i < read_size; i++){
+        if(client_message[i] == 0){
+            nullFound = 1;
+            break;
+        }
+    }
+
+    // null not found, continue recv till null is found
+    if(!nullFound){
+        int remainingRead = nullTerminatedRecieve(log_file, sock, client_message + sizeof(uint16_t), DEFAULT_RECEIVE_SIZE, 0);
+        totalBytesReceivedCurrentClient += remainingRead;
+        read_size += remainingRead;
+    }
 
 
     // build response
@@ -138,19 +161,28 @@ int handleNullTerminatedCmd(char * response_message, char * client_message, int 
 
 --------------------------------------------------------------------------------*/
 int handleGivenLengthCmd(char * response_message, char * client_message, int sock, int command, int read_size){
-    // TODO: check string length and if it is less than cmdLen then recv more data
     
+
 
     uint16_t cmdLength;
 
     memcpy(&cmdLength, &client_message[MESSAGE_INDEX], sizeof(cmdLength));
     cmdLength = ntohs(cmdLength);
 
-    //printf("CMD Length: %d\n", cmdLength);
+    // check string length and if it is less than cmdLen then recv more data
+    if(strlen(client_message + 4) < cmdLength){
+        int expected = cmdLength - strlen(client_message + 4);
 
+        int remaining = bufferedRecieve(expected, log_file, sock, client_message[strlen(client_message + 4)], 
+            DEFAULT_RECEIVE_SIZE - strlen(client_message + 4), 0);
+
+        totalBytesReceivedCurrentClient += remaining;
+        read_size += remaining;
+    
+    }
     // add null character for termination
     client_message[MESSAGE_INDEX + 2 + cmdLength] = 0;
-
+    printf("&client_message[MESSAGE_INDEX + 2]: %s\n", &client_message[MESSAGE_INDEX + 2]);
     // build response
     // client_message[MESSAGE_INDEX + 2]
     //          +2-> accounts for length before command string
@@ -163,7 +195,7 @@ int handleGivenLengthCmd(char * response_message, char * client_message, int soc
 
     // store 'len' in first 2 bytes of response_message
     memcpy(response_message, &len, sizeof(uint16_t));
-
+    printf("Response: %s\n", response_message + 2);
     int sent = managedSend(sock , response_message , DEFAULT_SEND_SIZE, strlen(response_message + sizeof(uint16_t)) + + sizeof(uint16_t), 0);
     if(sent <= 0){
         printf("Send failed");
@@ -180,6 +212,15 @@ int handleGivenLengthCmd(char * response_message, char * client_message, int soc
 int handleIntCmd(char * response_message, char * client_message, int sock, int command, int read_size){
 
      // TODO: check read_size is atleast 6 bytes
+    if(read_size < 6){
+        int expected = 6 - read_size;
+
+        int remaining = bufferedRecieve(expected, log_file, sock, client_message[read_size], 
+            DEFAULT_RECEIVE_SIZE - read_size, 0);
+
+        totalBytesReceivedCurrentClient += remaining;
+        read_size += remaining;
+    }
 
     // need to convert int command to string
     uint32_t intCmd;
@@ -215,6 +256,16 @@ int handleIntCmd(char * response_message, char * client_message, int sock, int c
 int handleByteAtATimeCmd(char * response_message, char * client_message, int sock, int command, int read_size){
     // TODO: check read_size is atleast 6 bytes
 
+    // TODO: check read_size is atleast 6 bytes
+    if(read_size < 6){
+        int expected = 6 - read_size;
+
+        int remaining = bufferedRecieve(expected, log_file, sock, client_message[read_size], 
+            DEFAULT_RECEIVE_SIZE - read_size, 0);
+
+        totalBytesReceivedCurrentClient += remaining;
+        read_size += remaining;
+    }
     
     
      // extract nBytes

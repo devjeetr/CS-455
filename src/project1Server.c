@@ -1,6 +1,7 @@
-/*
-    C socket server example
-*/
+// Devjeet Roy
+// John Chen
+
+
 #include <stdio.h>
 #include <string.h>    //strlen
 #include <sys/socket.h>
@@ -14,14 +15,9 @@
 
 #define MESSAGE_INDEX (2)
 
-
-
 int socket_desc;
 
 static volatile int keepRunning = 1;
-
-
-
 
 void ctrCHandler(int dummy){
 
@@ -42,12 +38,15 @@ int main(int argc , char *argv[])
     char response_message[DEFAULT_SEND_SIZE];
 
     signal(SIGINT, ctrCHandler);
-    
+    log_file = fopen(DEFAULT_LOG_FILE, "w+");
+    int port = 0;
+
     if(argc > 1){
-        log_file = fopen(argv[1], "w+");
+        char * c;
+        port = strtol(argv[1], &c, 10);
     }else{
-        printf("log file not provided in args, using default: %s\n", DEFAULT_LOG_FILE);
-        log_file = fopen(DEFAULT_LOG_FILE, "w+");
+        printf("No port specified. Exiting\n");
+        exit(0);
     }
 
     //Create socket
@@ -61,8 +60,8 @@ int main(int argc , char *argv[])
     //Prepare the sockaddr_in structure
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = INADDR_ANY;
-    server.sin_port = htons( PORT_NUMBER );
-     
+    server.sin_port = htons( port);
+    
     //Bind
     if( bind(socket_desc,(struct sockaddr *)&server , sizeof(server)) < 0)
     {
@@ -77,7 +76,7 @@ int main(int argc , char *argv[])
     
     while(keepRunning){ 
         //Accept and incoming connection
-        puts("\n\nWaiting for incoming connections...\n");
+        printf("\n\nListening on port %d. Waiting for incoming connections...\n\n", port);
         c = sizeof(struct sockaddr_in);
 
         //anccept connection from an incoming client
@@ -109,7 +108,7 @@ int main(int argc , char *argv[])
                 command = ntohs(command);
 
                 // check command is in valid range
-                if(command < 0 && command >= NUMBER_OF_COMMANDS){
+                if(command <= 0 && command >= NUMBER_OF_COMMANDS){
                     puts("Invalid command, terminating connection with client");
                     break;
                 }
