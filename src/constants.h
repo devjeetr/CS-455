@@ -28,13 +28,13 @@ char *arg;
 #define NUMBER_OF_COMMANDS (7)
 /* This is the list of commands to be run by the client to demonstrate your program */
 static command commands[] = {
-{nullTerminatedCmd, "Sent as a null-terminated string"},
-{givenLengthCmd, "Sent as an unterminated string"},
-{badIntCmd, "20160919"},
-{goodIntCmd, "20160919"},
-{byteAtATimeCmd, "500000"},
-{kByteAtATimeCmd, "500000"},
-{noMoreCommands, ""}
+	{nullTerminatedCmd, "Sent as a null-terminated string"},
+	{givenLengthCmd, "Sent as an unterminated string"},
+	{badIntCmd, "20160919"},
+	{goodIntCmd, "20160919"},
+	{byteAtATimeCmd, "500000"},
+	{kByteAtATimeCmd, "500000"},
+	{noMoreCommands, ""}
 };
 /*
 * These command names are to be prefixed to responses by the server; the array is

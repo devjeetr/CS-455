@@ -4,6 +4,7 @@
 #include<unistd.h> 
 #include "constants.h"
 
+
 int handleNoMoreCmd(char * inputBuffer, int sock){
     return 0;
 }
@@ -158,7 +159,7 @@ int sendAlternateBinaryBytesInBlocks(int socket, int totalDataSize, int blockSiz
     }
 
     memset(data, currentVal, blockSize);
-    nBytesSent += send(socket, data, totalDataSize, 0);
+    nBytesSent += send(socket, data, totalDataSize - nBytesSent, 0);
     
     free(data);
 

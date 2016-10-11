@@ -20,11 +20,15 @@ int socket_desc;
 
 static volatile int keepRunning = 1;
 
+
+
+
 void ctrCHandler(int dummy){
 
     //close file
     keepRunning = 0;
-    printf("Inside Handler\n");
+
+    printf("Saving log file and closing socket before exiting...\n");
     fclose(log_file);
     close(socket_desc);
     exit(0);
@@ -45,9 +49,6 @@ int main(int argc , char *argv[])
         printf("log file not provided in args, using default: %s\n", DEFAULT_LOG_FILE);
         log_file = fopen(DEFAULT_LOG_FILE, "w+");
     }
-
-
-    
 
     //Create socket
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
@@ -76,83 +77,59 @@ int main(int argc , char *argv[])
     
     while(keepRunning){ 
         //Accept and incoming connection
-        puts("Waiting for incoming connections...");
+        puts("\n\nWaiting for incoming connections...\n");
         c = sizeof(struct sockaddr_in);
-        
-        //accept connection from an incoming client
+
+        //anccept connection from an incoming client
         client_sock = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c);
         if (client_sock < 0)
         {
             perror("accept failed");
             return 1;
         }
-        puts("Connection accepted");
+
+        printf("Connection Accepted:\n");
+        printf("---------------------------------------------------------------------\n");
 
         
-        // TODO Receive response from client
 
-        read_size = loggedRecieve(log_file, client_sock, client_message, DEFAULT_RECEIVE_SIZE, 0);
+        while((read_size = loggedRecieve(log_file, client_sock, client_message, DEFAULT_RECEIVE_SIZE, 0)) > 0){
+            totalBytesReceivedCurrentClient += read_size;
+            // printf("Initial recv, received %d bytes\n", read_size);
 
-        printf("Initial recv, received %d bytes\n", read_size);
 
+            if(read_size == 0){
+                puts("Empty recv. Closing connection");
+                
+            }else{
 
-        if(read_size == 0)
-            break;
+                    // extract command number
+                uint16_t command;
+                memcpy(&command, client_message, sizeof(command));
+                command = ntohs(command);
 
-        // extract command number
-        uint16_t command;
-        memcpy(&command, client_message, sizeof(command));
-        command = ntohs(command);
+                // check command is in valid range
+                if(command < 0 && command >= NUMBER_OF_COMMANDS){
+                    puts("Invalid command, terminating connection with client");
+                    break;
+                }
 
-        // check command is in valid range
-        if(command < 0 && command >= NUMBER_OF_COMMANDS){
-            puts("Invalid command, terminating connection with client");
-            break;
+                printf("Command Received: %s\n", commandNames[command]);
+
+                // Use function pointer table to call appropriate handler
+
+                if((*handlerPtrs[command - 1])(response_message, client_message, client_sock, command, read_size) < 0){
+                    printf("Error in handler. Breaking!\n");
+                    break;
+                }
+            }
         }
-
-        printf("Command Received: %s\n", commandNames[command]);
-
-        //=================================================
-        //  Process each command down below
-        //=================================================
-
-        //=================================================
-        //  Null Terminated Command
-        //
-        //=================================================
-        // if(command == nullTerminatedCmd){
-
-        //     handleNullTerminatedCmd(response_message, client_message, client_sock, command, read_size);
-           
-            
-             
-        // }else if (command == givenLengthCmd){
-           
-        //     handleGivenLengthCmd(response_message, client_message, client_sock, command, read_size);
-
-        // }else if(command == badIntCmd || command == goodIntCmd){
-
-        //     handleIntCmd(response_message, client_message, client_sock, command, read_size);
-
-        // } else if(command == kByteAtATimeCmd || command == byteAtATimeCmd){
-
-        //     handleByteAtATimeCmd(response_message, client_message, client_sock, command, read_size);
-        // }
         
-        if((*handlerPtrs[command - 1])(response_message, client_message, client_sock, command, read_size) < 0){
-            printf("Error in handler. Breaking!\n");
-            break;
-        }
+        printf("Client connection closed. Total Bytes received: %d\n", totalBytesReceivedCurrentClient);
+        printf("---------------------------------------------------------------------\n");
 
-        if(read_size == 0)
-        {
-            puts("Client disconnected");
-            fflush(stdout);
-        }
-        else if(read_size == -1)
-        {
-            perror("recv failed");
-        }
+        totalBytesReceivedCurrentClient = 0;
+        
             
     }
     fclose(log_file);

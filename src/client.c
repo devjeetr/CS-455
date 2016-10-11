@@ -40,6 +40,9 @@ int getCommand(){
     }
 }
 
+// TODO: 
+//  Add command processing loop
+//
 
 int main(int argc , char *argv[])
 {
@@ -69,38 +72,36 @@ int main(int argc , char *argv[])
     puts("Connected\n");
     char inputBuffer[INPUT_BUFFER_SIZE];
 
-    while(1){
-        memset(inputBuffer, 0, INPUT_BUFFER_SIZE);
+    int bufferCounter = 0;
 
-        uint16_t choice = getCommand(); 
-        printf("Choice: %d\n", choice);
-        
-        if(choice == noMoreCommands){
+
+
+    for(int i = 0 ; i < 7; i++){
+        memset(inputBuffer, 0, INPUT_BUFFER_SIZE);
+        printf("command: %d\n", commands[i].cmd);
+
+        if(commands[i].cmd == 0){
             printf("Exiting....\n");
             break;
-        }else {
-            uint16_t tmp = htons(choice);
-            
-            // copy command # to input buffer
-            memcpy(inputBuffer, &tmp, sizeof(uint16_t));
-            char * cmd = inputBuffer + sizeof(uint16_t);
-            printf("Please enter arg: ");
-            
-            // special case for givenLengthCmd
-            if(choice == givenLengthCmd){
-                fgets(cmd + 2, INPUT_BUFFER_SIZE, stdin);
-                cmd[strlen(cmd + 2) + 1] = 0;
-            }else{
-                fgets(cmd, INPUT_BUFFER_SIZE, stdin);
-                cmd[strlen(cmd) - 1] = 0;
-            }
-             
-            if((*handlerPtrs[choice])(inputBuffer, sock) < 0){
-                printf("Error in handler. Breaking!\n");
-                break;
-            }
         }
-        printf("Waitinf for server reply\n");
+        
+
+        
+        uint16_t tmp = htons(commands[i].cmd);
+        
+        // copy copyommand # to input buffer
+        memcpy(inputBuffer, &tmp, sizeof(uint16_t));
+
+        
+        //copy arg
+        memcpy(inputBuffer + sizeof(uint16_t), commands[i].arg, strlen(commands[i].arg));
+        // call handler from handler table
+        if((*handlerPtrs[commands[i].cmd])(inputBuffer, sock) < 0){
+            printf("Error in handler. Breaking!\n");
+            break;
+        }
+
+        printf("Waiting for server reply\n");
         //Receive a reply from the server
         if( recv(sock , server_reply , DEFAULT_RECEIVE_SIZE , 0) < 0)
         {
@@ -116,7 +117,57 @@ int main(int argc , char *argv[])
         len = ntohs(len);
         printf("%d bytes: %s\n", len, server_reply + sizeof(uint16_t));
         printf("\n");
+
     }
+
+    // while(1){
+        // memset(inputBuffer, 0, INPUT_BUFFER_SIZE);
+
+        // uint16_t choice = getCommand(); 
+        // printf("Choice: %d\n", choice);
+        
+        // if(choice == noMoreCommands){
+        //     printf("Exiting....\n");
+        //     break;
+        // }else {
+        //     uint16_t tmp = htons(choice);
+            
+        //     // copy command # to input buffer
+        //     memcpy(inputBuffer, &tmp, sizeof(uint16_t));
+        //     char * cmd = inputBuffer + sizeof(uint16_t);
+        //     printf("Please enter arg: ");
+            
+        //     // special case for givenLengthCmd
+        //     if(choice == givenLengthCmd){
+        //         fgets(cmd + 2, INPUT_BUFFER_SIZE, stdin);
+        //         cmd[strlen(cmd + 2) + 1] = 0;
+        //     }else{
+        //         fgets(cmd, INPUT_BUFFER_SIZE, stdin);
+        //         cmd[strlen(cmd) - 1] = 0;
+        //     }
+             
+            // if((*handlerPtrs[choice])(inputBuffer, sock) < 0){
+            //     printf("Error in handler. Breaking!\n");
+            //     break;
+            // }
+    //     }
+        // printf("Waitinf for server reply\n");
+        // //Receive a reply from the server
+        // if( recv(sock , server_reply , DEFAULT_RECEIVE_SIZE , 0) < 0)
+        // {
+        //     puts("recv failed");
+        //     break;
+        // }
+         
+        // puts("Server reply :");
+
+        // // first 2 bytes is length
+        // uint16_t len;
+        // memcpy(&len, server_reply, sizeof(uint16_t));
+        // len = ntohs(len);
+        // printf("%d bytes: %s\n", len, server_reply + sizeof(uint16_t));
+        // printf("\n");
+    // }
 
     close(sock);
     return 0;
