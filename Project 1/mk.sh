@@ -1,3 +1,10 @@
+wd=$(pwd)
+
+if [ ! -d "$wd/bin" ]; then
+  echo creating bin directory..
+  mkdir bin
+fi
+
 echo Building bin/project1Server
 gcc -std=c99 -w src/project1Server.c -o bin/project1Server
 
