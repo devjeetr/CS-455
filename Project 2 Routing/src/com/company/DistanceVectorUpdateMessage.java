@@ -7,14 +7,14 @@ import java.util.regex.Pattern;
 /**
  * Created by devjeetroy on 11/13/16.
  */
-public class DistanceVectorUpdate {
+public class DistanceVectorUpdateMessage {
     private HashMap<String, Integer> distanceVectors;
     private static final String DISTANCE_UPDATE_REGEX_PATTERN = "";
 
-    DistanceVectorUpdate(String distanceVectorRawString){
+    DistanceVectorUpdateMessage(String distanceVectorRawString){
         if(!parseString(distanceVectorRawString)){
             throw new IllegalArgumentException("Illegal argument " +
-                    "supplied to DistanceVectorUpdate constructor");
+                    "supplied to DistanceVectorUpdateMessage constructor");
         }
 
         distanceVectors = new HashMap<String, Integer>();
@@ -47,6 +47,15 @@ public class DistanceVectorUpdate {
 
         return true;
     }
+//
+//    @Override
+//    public String toString(){
+//        StringBuilder builder = new StringBuilder();
+//
+//        builder.append("U ");
+//
+//        this.distanceVectors.forEach((k, v) -> builder.append(String.format("%s %s", k, v.)));
+//    }
 
     public HashMap<String, Integer> getDistanceVectors() {
         return distanceVectors;

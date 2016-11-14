@@ -7,14 +7,14 @@ import java.util.regex.Pattern;
 /**
  * Created by devjeetroy on 11/13/16.
  */
-public class LinkCostUpdate {
+public class LinkCostUpdateMessage {
     HashMap<String, Integer> LinkCosts;
     private static final String COST_UPDATE_REGEX_PATTERN = "";
 
-    public LinkCostUpdate(String linkCostRawString){
+    public LinkCostUpdateMessage(String linkCostRawString){
         if(!parseString(linkCostRawString)){
             throw new IllegalArgumentException("Illegal argument " +
-                    "supplied to LinkCostUpdate constructor");
+                    "supplied to LinkCostUpdateMessage constructor");
         }
 
         LinkCosts = new HashMap<String, Integer>();

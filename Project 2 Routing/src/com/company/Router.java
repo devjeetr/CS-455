@@ -155,7 +155,11 @@ public class Router {
         }
     }
 
-
+    /**
+     * Initializes a selector, several channels and
+     * binds each port to socket and registers channels
+     * with selector
+     */
     void initSelector(){
         int[] ports = new int[]{updatePort, commandPort};
 
@@ -164,8 +168,8 @@ public class Router {
                 ServerSocketChannel server = ServerSocketChannel.open();
 
                 server.configureBlocking(false);
-
                 server.socket().bind(new InetSocketAddress(this.hostname, port));
+
                 System.out.println(String.format("Trying to register port %d", port));
 
                 server.register(this.selector, server.validOps(), null);
@@ -176,27 +180,32 @@ public class Router {
         }
     }
 
-    void SendLinkUpdateMessage(){
+    private void SendLinkUpdateMessage(){
         throw new NotImplementedException();
     }
 
-    void SendDistanceUpdateMessage(){
+    private void SendDistanceUpdateMessage(){
         throw new NotImplementedException();
     }
 
-    void ReceiveUpdateMessage(String message){
+    private void ReceiveUpdateMessage(String message){
 
     }
 
-    void ReceiveLinkUpdateMessage(String message){
+    private void ReceiveLinkUpdateMessage(String message){
 
     }
 
-    void ReceiveDistanceUpdateMessage(String message){
+    private void ReceiveDistanceUpdateMessage(String message){
 
     }
 
-
+    /**
+     * Accepts a connection on given key and
+     * minimally configures it
+     * @param key
+     * @throws IOException
+     */
     private void accept(SelectionKey key) throws IOException {
         // For an accept to be pending the channel must be a server socket channel.
         ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
@@ -221,26 +230,64 @@ public class Router {
             if(bytesRead == -1){
                 System.out.println("Closing connection");
                 // TODO
-                // close connection
+                // close connection maybe?
             }
+            String message = new String(buffer.array(), "UTF-8");
+            System.out.println(String.format("Text received: %s", message));
 
-            System.out.println("Text received:");
-            System.out.println(new String(buffer.array(), "UTF-8"));
-
+            this.processMessage(message);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-    void Run(){
 
+    private void processMessage(String message){
+        // TODO
+        // figure out what kind of
+        // message it is and then
+        // serialize it to an object
+
+        try{
+            DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
+            System.out.println("Distance Vector Update Message");
+        }catch(IllegalArgumentException e){
+
+        }
+    }
+
+    private void updateNeighbors(){
+        // TODO
+        // update neighbors with link cost
+        createDistanceVectorUpdateString( this.routerTable.keySet());
+    }
+
+    private String createDistanceVectorUpdateString(Set<String> keys){
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("U");
+
+        this.routerTable.forEach((k, v) -> {
+                    if(keys.contains(k))
+                        builder.append(String.format(" %s %s", k, v.getCost()));
+                }
+        );
+
+        System.out.println(String.format("DistanceVectorUpdateString: %s", builder.toString()));
+
+        return builder.toString();
+    }
+
+    void Run(){
+        // Start timer here
+        long startTime = System.nanoTime();
+
+        // Initialize channels and selector
         initSelector();
 
         while (true) {
             try {
                 // Wait for an event one of the registered channels
-                this.selector.select();
+                this.selector.select(10000);
 
                 // Iterate over the set of keys for which events are available
                 Iterator selectedKeys = this.selector.selectedKeys().iterator();
@@ -265,8 +312,22 @@ public class Router {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+
+            // Update neighbors with link costs
+            // if 10 seconds has passed since last update
+            long timeElapsed = System.nanoTime() - startTime;
+            if(timeElapsed * Math.pow(10, -9) >= 10.0){
+                //System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
+
+                updateNeighbors();
+                startTime = System.nanoTime();
+            }
+
+
         }
     }
+
 
     public void PrintRoutingTable(){
        System.out.println("RouterName\tHostName\tCost\tNextHop\tUpdatePort\tCommandPort");
