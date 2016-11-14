@@ -1,20 +1,24 @@
 package com.company;
 
+import com.sun.corba.se.spi.activation.Server;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.Inet4Address;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
 import java.nio.channels.*;
+import java.nio.charset.CharsetDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-/**
- * Created by devjeetroy on 11/13/16.
- */
 public class Router {
     private Selector selector;
     private ServerSocketChannel channel;
@@ -27,6 +31,8 @@ public class Router {
 
     private String routerName;
     private Map<String, RouterProperties> routerTable;
+
+    private final static int READ_BUFFER_LENGTH = 1024;
 
     // Main config file constants
     private final static String MAIN_CONFIG_FILE_NAME = "routers";
@@ -53,7 +59,12 @@ public class Router {
         this.routerName = routerName;
 
         readConfig((configDirectory));
-
+        try {
+            this.selector = Selector.open();
+        } catch (IOException e) {
+            System.err.println("Here");
+            e.printStackTrace();
+        }
 
     }
 
@@ -146,23 +157,23 @@ public class Router {
 
 
     void initSelector(){
+        int[] ports = new int[]{updatePort, commandPort};
+
         try {
-            selector = Selector.open();
-        } catch (IOException e) {
-            System.out.println("Error opening selector.");
+            for (int port : ports) {
+                ServerSocketChannel server = ServerSocketChannel.open();
+
+                server.configureBlocking(false);
+
+                server.socket().bind(new InetSocketAddress(this.hostname, port));
+                System.out.println(String.format("Trying to register port %d", port));
+
+                server.register(this.selector, server.validOps(), null);
+            }
+        } catch(IOException e){
+            System.err.println("IOException while initializing server ports");
             e.printStackTrace();
         }
-
-        System.out.println("Selector created successfully");
-
-        try (ServerSocketChannel channel = this.channel = ServerSocketChannel.open()) {
-            channel.configureBlocking(false);
-        }catch(IOException e){
-            System.out.println("IOException with channel");
-            e.printStackTrace();
-        }
-
-
     }
 
     void SendLinkUpdateMessage(){
@@ -186,12 +197,75 @@ public class Router {
     }
 
 
+    private void accept(SelectionKey key) throws IOException {
+        // For an accept to be pending the channel must be a server socket channel.
+        ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
 
+        // Accept the connection and make it non-blocking
+        SocketChannel socketChannel = serverSocketChannel.accept();
+        Socket socket = socketChannel.socket();
+        socketChannel.configureBlocking(false);
+
+        // Register the new SocketChannel with our Selector, indicating
+        // we'd like to be notified when there's data waiting to be read
+        socketChannel.register(this.selector, SelectionKey.OP_READ);
+    }
+
+    private void read(SelectionKey key){
+        ByteBuffer buffer = ByteBuffer.allocate(READ_BUFFER_LENGTH);
+
+        SocketChannel channel = (SocketChannel) key.channel();
+
+        try {
+            int bytesRead = channel.read(buffer);
+            if(bytesRead == -1){
+                System.out.println("Closing connection");
+                // TODO
+                // close connection
+            }
+
+            System.out.println("Text received:");
+            System.out.println(new String(buffer.array(), "UTF-8"));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
     void Run(){
 
+        initSelector();
 
+        while (true) {
+            try {
+                // Wait for an event one of the registered channels
+                this.selector.select();
 
+                // Iterate over the set of keys for which events are available
+                Iterator selectedKeys = this.selector.selectedKeys().iterator();
 
+                while (selectedKeys.hasNext()) {
+                    SelectionKey key = (SelectionKey) selectedKeys.next();
+                    selectedKeys.remove();
+
+                    if (!key.isValid()) {
+                        continue;
+                    }
+
+                    // Check what event is available and deal with it
+                    if (key.isAcceptable()) {
+                        System.out.println("Connection accepted");
+                        this.accept(key);
+                    }else if(key.isReadable()){
+                        System.out.println("Reading");
+                        this.read(key);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void PrintRoutingTable(){

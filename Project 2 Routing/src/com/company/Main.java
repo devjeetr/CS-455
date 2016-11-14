@@ -19,5 +19,7 @@ public class Main {
                                     args[CONFIGURATION_DIRECTORY_INDEX]);
 
         router.PrintRoutingTable();
+
+        router.Run();
     }
 }
