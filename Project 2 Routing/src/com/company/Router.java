@@ -196,10 +196,6 @@ public class Router {
         throw new NotImplementedException();
     }
 
-    private void ReceiveUpdateMessage(String message){
-
-    }
-
     private void ReceiveLinkUpdateMessage(String message, String sender){
 
     }
@@ -207,29 +203,35 @@ public class Router {
     private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender){
         HashMap<String, Integer> distanceVectors = message.getDistanceVectors();
 
+        boolean update = false;
         int costToSender = this.routerTable.get(sender).getCost();
+        Set<String> keys = distanceVectors.keySet();
 
-        distanceVectors.forEach((destination, cost) -> {
+        RouterProperties prop = this.routerTable.get(sender);
+        prop.setCost(distanceVectors.get(this.routerName));
 
+        for(String destination: keys){
             if(!destination.equals(this.routerName)){
                 RouterProperties props = this.routerTable.getOrDefault(destination, null);
 
                 int currentCost = props.getCost();
-                int newCost = costToSender + cost;
+                int newCost = costToSender + distanceVectors.get(destination);
 
-                //System.out.println(String.format("Currentsize: %d, newSize: %d", currentCost, newCost));
                 if(currentCost > newCost){
-                    System.out.println(String.format("updating cost from %d to %d for %s",
-                            currentCost, newCost, this.routerName));
+                    System.out.println(String.format("(<%s> – dest: <%s> cost: <%d> nexthop: <%s>)",
+                            this.routerName, destination, newCost, sender));
 
+                    update = true;
                     // update this entry
                     props.setCost(newCost);
                     props.setNextHop(sender);
                 }
             }
+        }
 
-
-        });
+        if(update){
+            updateNeighbors();
+        }
     }
 
     /**
@@ -251,18 +253,13 @@ public class Router {
         ByteBuffer buffer = ByteBuffer.allocate(READ_BUFFER_LENGTH);
 
         DatagramChannel channel = (DatagramChannel) key.channel();
-        System.out.println("About to read");
-        System.out.println(channel.isConnected());
 
         try {
-            SocketAddress senderSocketAddress = channel.receive(buffer);
-            InetSocketAddress addr = (InetSocketAddress) senderSocketAddress;
+            InetSocketAddress address = (InetSocketAddress) channel.receive(buffer);
 
             // find who sent this message
-            String sender = findSender(addr);
-
+            String sender = findSender(address);
             String message = new String(buffer.array(), "UTF-8");
-            System.out.println(String.format("Text received: %s", message));
 
             this.processMessage(message, sender);
         } catch (IOException e) {
@@ -280,8 +277,6 @@ public class Router {
         for(String key: keys){
             RouterProperties props = routerTable.get(key);
 
-            System.out.println(String.format("Port: %d, expected: %d", port, props.getUpdatePort()));
-
             if( props.getHostName().equals(hostname) &&
                     props.getUpdatePort() == port)
                 return key;
@@ -295,7 +290,7 @@ public class Router {
            LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
             return;
         }catch(IllegalArgumentException e){
-            System.err.println("mpot Link cost update message");
+//            System.err.println("not Link cost update message");
         }
 
         try{
@@ -303,8 +298,9 @@ public class Router {
             this.ReceiveDistanceUpdateMessage(dVectorUpdateM, sender);
             return;
         }catch(IllegalArgumentException e){
-            System.err.println("mpot distance cost update message");
+//            System.err.println("mpot distance cost update message");
         }
+
     }
 
 
@@ -327,7 +323,6 @@ public class Router {
                         e.printStackTrace();
                     }
                 }
-
         );
     }
 
@@ -355,9 +350,6 @@ public class Router {
 
         while (true) {
             try {
-                System.out.println();
-                System.out.println("Checking Select..........");
-                System.out.println();
 
                 timeElapsed = System.nanoTime() - startTime;
                 // Wait for an event one of the registered channels
@@ -367,7 +359,6 @@ public class Router {
                 // Iterate over the set of keys for which events are available
                 Iterator selectedKeys = this.selector.selectedKeys().iterator();
 
-                System.out.println(this.selector.selectedKeys().toArray().length);
                 while (selectedKeys.hasNext()) {
                     SelectionKey key = (SelectionKey) selectedKeys.next();
                     selectedKeys.remove();
@@ -390,14 +381,12 @@ public class Router {
             timeElapsed = System.nanoTime() - startTime;
 
             if(timeElapsed * Math.pow(10, -9) >= this.UPDATE_INTERVAL){
-                System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
+                System.out.println(String.format("%s - %f s", this.routerName,
+                        timeElapsed * Math.pow(10, -9)));
 
                 updateNeighbors();
-                PrintRoutingTable();
                 startTime = System.nanoTime();
             }
-
-
         }
     }
 
