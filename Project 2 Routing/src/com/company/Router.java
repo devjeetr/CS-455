@@ -33,6 +33,8 @@ public class Router {
 
     private final static int READ_BUFFER_LENGTH = 1024;
 
+    private static final int UPDATE_INTERVAL = 3;
+
     // Main config file constants
     private final static String MAIN_CONFIG_FILE_NAME = "routers";
     private final static String MAIN_CONFIG_FILE_REGEX_PATTERN =
@@ -251,20 +253,34 @@ public class Router {
         // message it is and then
         // serialize it to an object
 
+        try{
+            LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
 
-//        try{
-//            DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
-//
-//            System.out.println("Distance Vector Update Message");
-//
-//        }catch(IllegalArgumentException e){
-//
-//        }
+            System.out.println("Link cost update message");
+
+            return;
+        }catch(IllegalArgumentException e){
+            System.err.println("mpot Link cost update message");
+        }
+
+        try{
+            DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
+
+            System.out.println("Distance Vector Update Message");
+
+            return;
+        }catch(IllegalArgumentException e){
+            System.err.println("mpot distance cost update message");
+        }
+
+
     }
 
+    // TODO
+    // reuse sockets that have already been
+    // created when ServerSocketChannel
+    // accepts connections
     private void updateNeighbors(){
-        // TODO
-        // update neighbors with link cost
         String updateString = createDistanceVectorUpdateString( this.routerTable.keySet());
 
         this.routerTable.forEach((k, v) ->{
@@ -279,6 +295,7 @@ public class Router {
                         bw.write(updateString);
                         bw.flush();
 
+                        // close socket and buffer after use
                         socket.close();
                         bw.close();
                     } catch (IOException e) {
@@ -300,7 +317,6 @@ public class Router {
                 }
         );
 
-//        System.out.println(String.format("DistanceVectorUpdateString: %s", builder.toString()));
 
         return builder.toString();
     }
@@ -312,7 +328,7 @@ public class Router {
 
         // Initialize channels and selector
         initSelector();
-        long maxTime = 10000;
+
 
         while (true) {
             try {
@@ -321,7 +337,8 @@ public class Router {
                 System.out.println();
                 timeElapsed = System.nanoTime() - startTime;
                 // Wait for an event one of the registered channels
-                this.selector.select(maxTime - (long) (timeElapsed * Math.pow(10, -6)));
+                this.selector.select((long)(this.UPDATE_INTERVAL * Math.pow(10, 3))
+                                    - (long) (timeElapsed * Math.pow(10, -6)));
 
                 // Iterate over the set of keys for which events are available
                 Iterator selectedKeys = this.selector.selectedKeys().iterator();
@@ -350,9 +367,12 @@ public class Router {
             // Update neighbors with link costs
             // if 10 seconds has passed since last update
             timeElapsed = System.nanoTime() - startTime;
-            if(timeElapsed * Math.pow(10, -9) >= 10.0){
+
+            if(timeElapsed * Math.pow(10, -9) >= this.UPDATE_INTERVAL        ){
                 System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
+
                 updateNeighbors();
+
                 startTime = System.nanoTime();
             }
 

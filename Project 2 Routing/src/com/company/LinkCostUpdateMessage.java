@@ -9,7 +9,11 @@ import java.util.regex.Pattern;
  */
 public class LinkCostUpdateMessage {
     HashMap<String, Integer> LinkCosts;
-    private static final String COST_UPDATE_REGEX_PATTERN = "";
+
+    // Some constants for regex stuff
+    private static final String COST_UPDATE_REGEX_PATTERN = "L\\s([A-Za-z])\\s([0-9]+)\\s*";
+    private static final int COST_UPDATE_DESTINATION_INDEX = 1;
+    private static final int COST_UPDATE_COST_INDEX = 2;
 
     public LinkCostUpdateMessage(String linkCostRawString){
         if(!parseString(linkCostRawString)){
@@ -34,13 +38,15 @@ public class LinkCostUpdateMessage {
     private boolean parseString(String rawString){
         Pattern pattern = Pattern.compile(COST_UPDATE_REGEX_PATTERN);
         Matcher matcher = pattern.matcher(rawString);
+        if(!matcher.find())
+            return false;
+
+        matcher.reset();
 
         while(matcher.find()){
-            if(matcher.groupCount() < 3){
-                return false;
-            }
 
-            LinkCosts.put(matcher.group(1), Integer.parseInt(matcher.group(2)));
+            LinkCosts.put(matcher.group(this.COST_UPDATE_DESTINATION_INDEX),
+                    Integer.parseInt(matcher.group(this.COST_UPDATE_COST_INDEX)));
         }
 
 
