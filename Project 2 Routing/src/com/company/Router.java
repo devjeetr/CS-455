@@ -3,10 +3,9 @@ package com.company;
 import com.sun.corba.se.spi.activation.Server;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.ByteBuffer;
@@ -231,7 +230,12 @@ public class Router {
                 System.out.println("Closing connection");
                 // TODO
                 // close connection maybe?
+                channel.socket().close();
+                channel.close();
+
+                return;
             }
+
             String message = new String(buffer.array(), "UTF-8");
             System.out.println(String.format("Text received: %s", message));
 
@@ -247,18 +251,42 @@ public class Router {
         // message it is and then
         // serialize it to an object
 
-        try{
-            DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
-            System.out.println("Distance Vector Update Message");
-        }catch(IllegalArgumentException e){
 
-        }
+//        try{
+//            DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
+//
+//            System.out.println("Distance Vector Update Message");
+//
+//        }catch(IllegalArgumentException e){
+//
+//        }
     }
 
     private void updateNeighbors(){
         // TODO
         // update neighbors with link cost
-        createDistanceVectorUpdateString( this.routerTable.keySet());
+        String updateString = createDistanceVectorUpdateString( this.routerTable.keySet());
+
+        this.routerTable.forEach((k, v) ->{
+                    try {
+                        InetAddress address = InetAddress.getByName(v.getHostName());
+                        Socket socket = new Socket(address, v.getUpdatePort());
+                        //Send the message to the server
+                        OutputStream os = socket.getOutputStream();
+                        OutputStreamWriter osw = new OutputStreamWriter(os);
+                        BufferedWriter bw = new BufferedWriter(osw);
+
+                        bw.write(updateString);
+                        bw.flush();
+
+                        socket.close();
+                        bw.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+        );
     }
 
     private String createDistanceVectorUpdateString(Set<String> keys){
@@ -272,7 +300,7 @@ public class Router {
                 }
         );
 
-        System.out.println(String.format("DistanceVectorUpdateString: %s", builder.toString()));
+//        System.out.println(String.format("DistanceVectorUpdateString: %s", builder.toString()));
 
         return builder.toString();
     }
@@ -280,14 +308,20 @@ public class Router {
     void Run(){
         // Start timer here
         long startTime = System.nanoTime();
+        long timeElapsed;
 
         // Initialize channels and selector
         initSelector();
+        long maxTime = 10000;
 
         while (true) {
             try {
+                System.out.println();
+                System.out.println("Checking Select..........");
+                System.out.println();
+                timeElapsed = System.nanoTime() - startTime;
                 // Wait for an event one of the registered channels
-                this.selector.select(10000);
+                this.selector.select(maxTime - (long) (timeElapsed * Math.pow(10, -6)));
 
                 // Iterate over the set of keys for which events are available
                 Iterator selectedKeys = this.selector.selectedKeys().iterator();
@@ -313,13 +347,11 @@ public class Router {
                 e.printStackTrace();
             }
 
-
             // Update neighbors with link costs
             // if 10 seconds has passed since last update
-            long timeElapsed = System.nanoTime() - startTime;
+            timeElapsed = System.nanoTime() - startTime;
             if(timeElapsed * Math.pow(10, -9) >= 10.0){
-                //System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
-
+                System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
                 updateNeighbors();
                 startTime = System.nanoTime();
             }
