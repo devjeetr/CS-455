@@ -44,7 +44,6 @@ public class LinkCostUpdateMessage {
         matcher.reset();
 
         while(matcher.find()){
-
             LinkCosts.put(matcher.group(this.COST_UPDATE_DESTINATION_INDEX),
                     Integer.parseInt(matcher.group(this.COST_UPDATE_COST_INDEX)));
         }

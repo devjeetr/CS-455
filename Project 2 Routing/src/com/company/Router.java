@@ -4,10 +4,7 @@ import com.sun.corba.se.spi.activation.Server;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
-import java.net.Inet4Address;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import java.net.*;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.*;
@@ -20,7 +17,7 @@ import java.util.regex.Pattern;
 
 public class Router {
     private Selector selector;
-    private ServerSocketChannel channel;
+    private DatagramChannel channel;
 
     private Inet4Address hostAddress;
 
@@ -31,9 +28,12 @@ public class Router {
     private String routerName;
     private Map<String, RouterProperties> routerTable;
 
+    private DatagramChannel updateChannel;
+    private DatagramChannel commandChannel;
+
     private final static int READ_BUFFER_LENGTH = 1024;
 
-    private static final int UPDATE_INTERVAL = 3;
+    private static final int UPDATE_INTERVAL = 10;
 
     // Main config file constants
     private final static String MAIN_CONFIG_FILE_NAME = "routers";
@@ -51,7 +51,7 @@ public class Router {
     private final static int SELF_CONFIG_FILE_COST_INDEX = 2;
 
 
-    private static final String ROUTING_TABLE_OUTPUT_STRING_FORMAT = "\t%s\t\t%s\t%s\t\t%s\t\t%s\t\t%s";
+    private static final String ROUTING_TABLE_OUTPUT_STRING_FORMAT = "\t%s\t%s\t%s\t%s\t\t%s\t\t%s";
 
 
     Router(String routerName, String configDirectory){
@@ -63,7 +63,6 @@ public class Router {
         try {
             this.selector = Selector.open();
         } catch (IOException e) {
-            System.err.println("Here");
             e.printStackTrace();
         }
 
@@ -145,8 +144,9 @@ public class Router {
                     if(properties == null)
                         throw new IllegalStateException("Destination not in " +
                                 "routing table: readSelfConfigFile");
-
+                    properties.setNeighbor(true);
                     properties.setCost(cost);
+                    properties.setNextHop(this.routerName);
                 }
             }
         } catch (IOException e){
@@ -166,14 +166,21 @@ public class Router {
 
         try {
             for (int port : ports) {
-                ServerSocketChannel server = ServerSocketChannel.open();
+                DatagramChannel server = DatagramChannel.open();
 
                 server.configureBlocking(false);
+
                 server.socket().bind(new InetSocketAddress(this.hostname, port));
+                server.socket().setReuseAddress(true);
+
+                if(port == updatePort)
+                    updateChannel = server;
+                else if(port == commandPort)
+                    commandChannel = server;
 
                 System.out.println(String.format("Trying to register port %d", port));
 
-                server.register(this.selector, server.validOps(), null);
+                server.register(this.selector, SelectionKey.OP_READ, null);
             }
         } catch(IOException e){
             System.err.println("IOException while initializing server ports");
@@ -193,12 +200,36 @@ public class Router {
 
     }
 
-    private void ReceiveLinkUpdateMessage(String message){
+    private void ReceiveLinkUpdateMessage(String message, String sender){
 
     }
 
-    private void ReceiveDistanceUpdateMessage(String message){
+    private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender){
+        HashMap<String, Integer> distanceVectors = message.getDistanceVectors();
 
+        int costToSender = this.routerTable.get(sender).getCost();
+
+        distanceVectors.forEach((destination, cost) -> {
+
+            if(!destination.equals(this.routerName)){
+                RouterProperties props = this.routerTable.getOrDefault(destination, null);
+
+                int currentCost = props.getCost();
+                int newCost = costToSender + cost;
+
+                //System.out.println(String.format("Currentsize: %d, newSize: %d", currentCost, newCost));
+                if(currentCost > newCost){
+                    System.out.println(String.format("updating cost from %d to %d for %s",
+                            currentCost, newCost, this.routerName));
+
+                    // update this entry
+                    props.setCost(newCost);
+                    props.setNextHop(sender);
+                }
+            }
+
+
+        });
     }
 
     /**
@@ -209,55 +240,59 @@ public class Router {
      */
     private void accept(SelectionKey key) throws IOException {
         // For an accept to be pending the channel must be a server socket channel.
-        ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
-
-        // Accept the connection and make it non-blocking
-        SocketChannel socketChannel = serverSocketChannel.accept();
-        Socket socket = socketChannel.socket();
-        socketChannel.configureBlocking(false);
+        DatagramChannel serverSocketChannel = (DatagramChannel) key.channel();
 
         // Register the new SocketChannel with our Selector, indicating
         // we'd like to be notified when there's data waiting to be read
-        socketChannel.register(this.selector, SelectionKey.OP_READ);
+        serverSocketChannel.register(this.selector, SelectionKey.OP_READ);
     }
 
     private void read(SelectionKey key){
         ByteBuffer buffer = ByteBuffer.allocate(READ_BUFFER_LENGTH);
 
-        SocketChannel channel = (SocketChannel) key.channel();
+        DatagramChannel channel = (DatagramChannel) key.channel();
+        System.out.println("About to read");
+        System.out.println(channel.isConnected());
 
         try {
-            int bytesRead = channel.read(buffer);
-            if(bytesRead == -1){
-                System.out.println("Closing connection");
-                // TODO
-                // close connection maybe?
-                channel.socket().close();
-                channel.close();
+            SocketAddress senderSocketAddress = channel.receive(buffer);
+            InetSocketAddress addr = (InetSocketAddress) senderSocketAddress;
 
-                return;
-            }
+            // find who sent this message
+            String sender = findSender(addr);
 
             String message = new String(buffer.array(), "UTF-8");
             System.out.println(String.format("Text received: %s", message));
 
-            this.processMessage(message);
+            this.processMessage(message, sender);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void processMessage(String message){
-        // TODO
-        // figure out what kind of
-        // message it is and then
-        // serialize it to an object
+    private String findSender(InetSocketAddress socketAddress){
 
-        try{
-            LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
+        int port = socketAddress.getPort();
+        String hostname = socketAddress.getHostName();
 
-            System.out.println("Link cost update message");
+        Set<String> keys = this.routerTable.keySet();
 
+        for(String key: keys){
+            RouterProperties props = routerTable.get(key);
+
+            System.out.println(String.format("Port: %d, expected: %d", port, props.getUpdatePort()));
+
+            if( props.getHostName().equals(hostname) &&
+                    props.getUpdatePort() == port)
+                return key;
+        }
+
+        throw new IllegalStateException("Sender data not found in routing table. Aborting.");
+    }
+
+    private void processMessage(String message, String sender){
+       try{
+           LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
             return;
         }catch(IllegalArgumentException e){
             System.err.println("mpot Link cost update message");
@@ -265,39 +300,29 @@ public class Router {
 
         try{
             DistanceVectorUpdateMessage dVectorUpdateM = new DistanceVectorUpdateMessage(message);
-
-            System.out.println("Distance Vector Update Message");
-
+            this.ReceiveDistanceUpdateMessage(dVectorUpdateM, sender);
             return;
         }catch(IllegalArgumentException e){
             System.err.println("mpot distance cost update message");
         }
-
-
     }
+
 
     // TODO
     // reuse sockets that have already been
     // created when ServerSocketChannel
     // accepts connections
     private void updateNeighbors(){
-        String updateString = createDistanceVectorUpdateString( this.routerTable.keySet());
+        String updateString = createDistanceVectorUpdateString(this.routerTable.keySet());
 
         this.routerTable.forEach((k, v) ->{
                     try {
-                        InetAddress address = InetAddress.getByName(v.getHostName());
-                        Socket socket = new Socket(address, v.getUpdatePort());
-                        //Send the message to the server
-                        OutputStream os = socket.getOutputStream();
-                        OutputStreamWriter osw = new OutputStreamWriter(os);
-                        BufferedWriter bw = new BufferedWriter(osw);
+                        if(v.isNeighbor()){
+                            ByteBuffer sendBuffer = ByteBuffer.wrap(updateString.getBytes());
 
-                        bw.write(updateString);
-                        bw.flush();
-
-                        // close socket and buffer after use
-                        socket.close();
-                        bw.close();
+                            updateChannel.send(sendBuffer, new InetSocketAddress(v.getHostName(),
+                                    v.getUpdatePort()));
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -317,7 +342,6 @@ public class Router {
                 }
         );
 
-
         return builder.toString();
     }
 
@@ -329,34 +353,31 @@ public class Router {
         // Initialize channels and selector
         initSelector();
 
-
         while (true) {
             try {
                 System.out.println();
                 System.out.println("Checking Select..........");
                 System.out.println();
+
                 timeElapsed = System.nanoTime() - startTime;
                 // Wait for an event one of the registered channels
                 this.selector.select((long)(this.UPDATE_INTERVAL * Math.pow(10, 3))
-                                    - (long) (timeElapsed * Math.pow(10, -6)));
+                        - (long) (timeElapsed * Math.pow(10, -6)));
 
                 // Iterate over the set of keys for which events are available
                 Iterator selectedKeys = this.selector.selectedKeys().iterator();
 
+                System.out.println(this.selector.selectedKeys().toArray().length);
                 while (selectedKeys.hasNext()) {
                     SelectionKey key = (SelectionKey) selectedKeys.next();
                     selectedKeys.remove();
 
                     if (!key.isValid()) {
+                        System.out.println("Not valid");
                         continue;
                     }
 
-                    // Check what event is available and deal with it
-                    if (key.isAcceptable()) {
-                        System.out.println("Connection accepted");
-                        this.accept(key);
-                    }else if(key.isReadable()){
-                        System.out.println("Reading");
+                    if(key.isReadable()){
                         this.read(key);
                     }
                 }
@@ -368,11 +389,11 @@ public class Router {
             // if 10 seconds has passed since last update
             timeElapsed = System.nanoTime() - startTime;
 
-            if(timeElapsed * Math.pow(10, -9) >= this.UPDATE_INTERVAL        ){
+            if(timeElapsed * Math.pow(10, -9) >= this.UPDATE_INTERVAL){
                 System.out.println(String.format("Time elapsed: %f s", timeElapsed * Math.pow(10, -9)));
 
                 updateNeighbors();
-
+                PrintRoutingTable();
                 startTime = System.nanoTime();
             }
 

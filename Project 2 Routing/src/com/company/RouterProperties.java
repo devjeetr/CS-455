@@ -12,6 +12,8 @@ public class RouterProperties {
 
     private int UpdatePort;
     private int CommandPort;
+    private boolean isNeighbor;
+
 
     public RouterProperties(String hostname, int cost, int updatePort, int commandPort){
         this.HostName = hostname;
@@ -22,6 +24,7 @@ public class RouterProperties {
 
         this.UpdatePort = updatePort;
         this.CommandPort = commandPort;
+        this.isNeighbor = false;
     }
 
     public int getCost() {
@@ -62,5 +65,13 @@ public class RouterProperties {
 
     public void setCommandPort(int commandPort) {
         CommandPort = commandPort;
+    }
+
+    public boolean isNeighbor() {
+        return isNeighbor;
+    }
+
+    public void setNeighbor(boolean neighbor) {
+        isNeighbor = neighbor;
     }
 }
