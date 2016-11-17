@@ -1,5 +1,5 @@
 echo Building.....
-gradlew assemble
+./gradlew assemble
 echo Build successfull
 
 mv build/libs/Project\ 2\ Routing.jar TestBed/app.jar

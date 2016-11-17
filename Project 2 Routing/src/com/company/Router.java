@@ -209,7 +209,7 @@ public class Router {
 
         updateNeighbors();
 
-        this.PrintRoutingTable();
+
     }
 
     private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender){
@@ -399,6 +399,7 @@ public class Router {
 
                 updateNeighbors();
                 startTime = System.nanoTime();
+                this.PrintRoutingTable();
             }
         }
     }
