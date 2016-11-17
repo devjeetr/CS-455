@@ -146,7 +146,7 @@ public class Router {
                                 "routing table: readSelfConfigFile");
                     properties.setNeighbor(true);
                     properties.setCost(cost);
-                    properties.setNextHop(this.routerName);
+                    properties.setNextHop(destination);
                 }
             }
         } catch (IOException e){
@@ -271,6 +271,7 @@ public class Router {
             InetSocketAddress address = (InetSocketAddress) channel.receive(buffer);
 
             // find who sent this message
+
             String sender = findSender(address);
             String message = new String(buffer.array(), "UTF-8");
 
@@ -295,12 +296,14 @@ public class Router {
                 return key;
         }
 
-        throw new IllegalStateException("Sender data not found in routing table. Aborting.");
+        return null;
+        //throw new IllegalStateException("Sender data not found in routing table. Aborting.");
     }
 
     private void processMessage(String message, String sender){
        try{
            LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
+           this.ReceiveLinkUpdateMessage(dVectorUpdateM, sender);
             return;
         }catch(IllegalArgumentException e){
 //            System.err.println("not Link cost update message");
