@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * Created by devjeetroy on 11/13/16.
  */
 public class LinkCostUpdateMessage {
-    HashMap<String, Integer> LinkCosts;
+    private HashMap<String, Integer> LinkCosts;
 
     // Some constants for regex stuff
     private static final String COST_UPDATE_REGEX_PATTERN = "L\\s([A-Za-z])\\s([0-9]+)\\s*";
@@ -51,4 +51,13 @@ public class LinkCostUpdateMessage {
 
         return true;
     }
+
+    public HashMap<String, Integer> getLinkCosts() {
+        return LinkCosts;
+    }
+
+    public void setLinkCosts(HashMap<String, Integer> linkCosts) {
+        LinkCosts = linkCosts;
+    }
+
 }

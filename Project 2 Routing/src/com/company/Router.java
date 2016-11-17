@@ -196,8 +196,20 @@ public class Router {
         throw new NotImplementedException();
     }
 
-    private void ReceiveLinkUpdateMessage(String message, String sender){
+    private void ReceiveLinkUpdateMessage(LinkCostUpdateMessage message, String sender){
+        HashMap linkCosts = message.getLinkCosts();
 
+        // only 1 link cost is expected for all intents and purposes
+        String destination = (String) linkCosts.keySet().iterator().next();
+        int newCost  = (int) linkCosts.get(destination);
+
+        RouterProperties prop = this.routerTable.get(destination);
+
+        prop.setCost(newCost);
+
+        updateNeighbors();
+
+        this.PrintRoutingTable();
     }
 
     private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender){
@@ -231,6 +243,7 @@ public class Router {
 
         if(update){
             updateNeighbors();
+
         }
     }
 
