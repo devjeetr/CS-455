@@ -8,31 +8,42 @@ public class RouterProperties {
     private String HostName;
     private String NextHop;
 
-    private int Cost;
+    private int BestRouteCost;
+
+    public int getLinkCost() {
+        return LinkCost;
+    }
+
+    public void setLinkCost(int linkCost) {
+        LinkCost = linkCost;
+    }
+
+    private int LinkCost;
 
     private int UpdatePort;
     private int CommandPort;
     private boolean isNeighbor;
 
 
-    public RouterProperties(String hostname, int cost, int updatePort, int commandPort){
+    public RouterProperties(String hostname, int linkCost, int updatePort, int commandPort){
         this.HostName = hostname;
 
         this.NextHop = null;
 
-        this.Cost = cost;
+        this.LinkCost = linkCost;
+        this.BestRouteCost = linkCost;
 
         this.UpdatePort = updatePort;
         this.CommandPort = commandPort;
         this.isNeighbor = false;
     }
 
-    public int getCost() {
-        return Cost;
+    public int getBestRouteCost() {
+        return BestRouteCost;
     }
 
-    public void setCost(int cost) {
-        Cost = cost;
+    public void setBestRouteCost(int bestRouteCost) {
+        BestRouteCost = bestRouteCost;
     }
 
     public String getNextHop() {

@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # Takes as input:
-#    List of edges: end1 end2 cost
+#    List of edges: end1 end2 bestRouteCost
 # Produces as output:
 #    a file for each router, endi.cfg, and a file
 #    routers containing routername hostname commandport updateport
 import string
 
-def addedge(routers, left, right, cost):
+def addedge(routers, left, right, bestRouteCost):
     if left not in routers.keys():
         routers[left] = {}
     if right not in routers.keys():
         routers[right] = {}
-    routers[left][right] = cost
-    routers[right][left] = cost
+    routers[left][right] = bestRouteCost
+    routers[right][left] = bestRouteCost
 
 def genFiles(test):
     f = open(test+'/net.cfg')

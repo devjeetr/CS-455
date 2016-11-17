@@ -11,7 +11,7 @@ public class DistanceVectorUpdateMessage {
     private HashMap<String, Integer> distanceVectors;
 
     // Some constants for regex stuff
-    private static final String DISTANCE_UPDATE_REGEX_PATTERN = "U\\s(?:([A-Za-z])\\s([0-9]+)\\s*)+";
+    private static final String DISTANCE_UPDATE_REGEX_PATTERN = "^U\\s(?:([A-Za-z])\\s([0-9]+)\\s*)+";
     private static final String DISTANCE_UPDATE_CAPTURE_GROUP_REGEX_PATTERN = "([A-Za-z])\\s([0-9]+)\\s{0,1}";
     private static final int DISTANCE_UPDATE_DESTINATION_INDEX = 1;
     private static final int DISTANCE_UPDATE_COST_INDEX = 2;
@@ -20,7 +20,10 @@ public class DistanceVectorUpdateMessage {
         distanceVectors = new HashMap<String, Integer>();
 
         if(!parseString(distanceVectorRawString)){
-            throw new IllegalArgumentException("Illegal argument " +
+//            throw new IllegalArgumentException("Illegal argument " +
+//                    "supplied to DistanceVectorUpdateMessage constructor");
+
+            System.out.println("Illegal argument " +
                     "supplied to DistanceVectorUpdateMessage constructor");
         }
 

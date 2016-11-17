@@ -1,15 +1,11 @@
 package com.company;
 
-import com.sun.corba.se.spi.activation.Server;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.nio.channels.*;
-import java.nio.charset.CharsetDecoder;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -31,6 +27,8 @@ public class Router {
     private DatagramChannel updateChannel;
     private DatagramChannel commandChannel;
 
+    private boolean usePoisonReverse;
+
     private final static int READ_BUFFER_LENGTH = 1024;
 
     private static final int UPDATE_INTERVAL = 10;
@@ -51,20 +49,18 @@ public class Router {
     private final static int SELF_CONFIG_FILE_COST_INDEX = 2;
 
 
-    private static final String ROUTING_TABLE_OUTPUT_STRING_FORMAT = "\t%s\t%s\t%s\t%s\t\t%s\t\t%s";
+    private static final String ROUTING_TABLE_OUTPUT_STRING_FORMAT = "  %s\t%s\t%s\t%s\t%s\t%s\t%s";
 
 
-    Router(String routerName, String configDirectory){
+    Router(String routerName, String configDirectory, boolean usePoisonReverse){
+        // initialize important class member vars
+        this.usePoisonReverse = usePoisonReverse;
+        this.routerName = routerName;
         routerTable = new HashMap<String, RouterProperties>();
 
-        this.routerName = routerName;
-
+        // read config from test directory
         readConfig((configDirectory));
-        try {
-            this.selector = Selector.open();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
@@ -145,7 +141,8 @@ public class Router {
                         throw new IllegalStateException("Destination not in " +
                                 "routing table: readSelfConfigFile");
                     properties.setNeighbor(true);
-                    properties.setCost(cost);
+                    properties.setLinkCost(cost);
+                    properties.setBestRouteCost(cost);
                     properties.setNextHop(destination);
                 }
             }
@@ -162,6 +159,15 @@ public class Router {
      * with selector
      */
     void initSelector(){
+        // Initialize selector
+        try {
+            this.selector = Selector.open();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // now create channels, bind to appropriate port
+        // and register with selector
         int[] ports = new int[]{updatePort, commandPort};
 
         try {
@@ -205,46 +211,62 @@ public class Router {
 
         RouterProperties prop = this.routerTable.get(destination);
 
-        prop.setCost(newCost);
+        boolean update = prop.getLinkCost() != newCost;
 
-        updateNeighbors();
+        prop.setLinkCost(newCost);
+        if(prop.getNextHop().equals(destination))
+            prop.setBestRouteCost(newCost);
 
+        if(this.usePoisonReverse && newCost >= 64){
+            prop.setNextHop(null);
+        }
 
+        if(update)
+            updateNeighbors();
     }
 
-    private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender){
+    private void ReceiveDistanceUpdateMessage(DistanceVectorUpdateMessage message, String sender) {
         HashMap<String, Integer> distanceVectors = message.getDistanceVectors();
 
         boolean update = false;
-        int costToSender = this.routerTable.get(sender).getCost();
+        int costToSender = this.routerTable.get(sender).getLinkCost();
         Set<String> keys = distanceVectors.keySet();
 
         RouterProperties prop = this.routerTable.get(sender);
-        prop.setCost(distanceVectors.get(this.routerName));
+        prop.setBestRouteCost(distanceVectors.get(this.routerName));
+        try{
+            for(String destination: keys){
+                if(!destination.equals(this.routerName)){
+                    RouterProperties props = this.routerTable.getOrDefault(destination, null);
 
-        for(String destination: keys){
-            if(!destination.equals(this.routerName)){
-                RouterProperties props = this.routerTable.getOrDefault(destination, null);
+                    int currentCost = props.getBestRouteCost();
+                    int newCost = costToSender + distanceVectors.get(destination);
 
-                int currentCost = props.getCost();
-                int newCost = costToSender + distanceVectors.get(destination);
+                    if(currentCost > newCost || (currentCost != newCost && props.getNextHop() != null && props.getNextHop().equals(sender))){
+                        System.out.println(String.format("(<%s> – dest: <%s> cost: <%d> nexthop: <%s>)",
+                                this.routerName, destination, newCost, sender));
 
-                if(currentCost > newCost){
-                    System.out.println(String.format("(<%s> – dest: <%s> cost: <%d> nexthop: <%s>)",
-                            this.routerName, destination, newCost, sender));
+                        update = true;
 
-                    update = true;
-                    // update this entry
-                    props.setCost(newCost);
-                    props.setNextHop(sender);
+                        // update this entry
+                        props.setBestRouteCost(newCost);
+                        props.setNextHop(sender);
+
+                        if(this.usePoisonReverse && newCost >= 64){
+                            props.setNextHop(null);
+                        }
+                    }
                 }
             }
+            if(update){
+                updateNeighbors();
+
+            }
+        } catch (Exception e){
+            e.printStackTrace();
         }
 
-        if(update){
-            updateNeighbors();
 
-        }
     }
 
     /**
@@ -301,6 +323,18 @@ public class Router {
     }
 
     private void processMessage(String message, String sender){
+        try{
+            PrintMessage dVectorUpdateM = new PrintMessage(message);
+            if(dVectorUpdateM.getRouterName() == null)
+                this.PrintRoutingTable();
+            else
+                this.PrintRoutingTable(dVectorUpdateM.getRouterName());
+
+            return;
+        }catch(IllegalArgumentException e){
+//            System.err.println("mpot distance cost update message");
+        }
+
        try{
            LinkCostUpdateMessage dVectorUpdateM = new LinkCostUpdateMessage(message);
            this.ReceiveLinkUpdateMessage(dVectorUpdateM, sender);
@@ -317,6 +351,8 @@ public class Router {
 //            System.err.println("mpot distance cost update message");
         }
 
+
+
     }
 
 
@@ -325,21 +361,34 @@ public class Router {
     // created when ServerSocketChannel
     // accepts connections
     private void updateNeighbors(){
-        String updateString = createDistanceVectorUpdateString(this.routerTable.keySet());
 
-        this.routerTable.forEach((k, v) ->{
-                    try {
-                        if(v.isNeighbor()){
-                            ByteBuffer sendBuffer = ByteBuffer.wrap(updateString.getBytes());
+        try{
+            Set<String> keys = new HashSet<String>();
 
-                            updateChannel.send(sendBuffer, new InetSocketAddress(v.getHostName(),
-                                    v.getUpdatePort()));
+            for(String key: this.routerTable.keySet()){
+                if(this.routerTable.get(key).isNeighbor())
+                    keys.add((String) key);
+            }
+
+            String updateString = createDistanceVectorUpdateString(keys);
+
+            this.routerTable.forEach((k, v) ->{
+                        try {
+                            if(v.isNeighbor()){
+                                ByteBuffer sendBuffer = ByteBuffer.wrap(updateString.getBytes());
+
+                                updateChannel.send(sendBuffer, new InetSocketAddress(v.getHostName(),
+                                        v.getUpdatePort()));
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
                     }
-                }
-        );
+            );
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     private String createDistanceVectorUpdateString(Set<String> keys){
@@ -349,7 +398,7 @@ public class Router {
 
         this.routerTable.forEach((k, v) -> {
                     if(keys.contains(k))
-                        builder.append(String.format(" %s %s", k, v.getCost()));
+                        builder.append(String.format(" %s %s", k, v.getBestRouteCost()));
                 }
         );
 
@@ -407,14 +456,27 @@ public class Router {
         }
     }
 
-
     public void PrintRoutingTable(){
-       System.out.println("RouterName\tHostName\tCost\tNextHop\tUpdatePort\tCommandPort");
+        PrintRoutingTable(this.routerTable.keySet());
+    }
+    public void PrintRoutingTable(String key){
+       Set<String> set = new HashSet<String>();
+        set.add(key);
+        PrintRoutingTable(set);
+        System.out.println("Hi");
+    }
+    public void PrintRoutingTable(Set<String> keys){
+        System.out.println("RouterName\tHostName\tCost\tBestRoutingCost\tNextHop\tUpdatePort\tCommandPort");
 
-       this.routerTable.forEach((k,v) ->
-               System.out.println(String.format(ROUTING_TABLE_OUTPUT_STRING_FORMAT,
-                                                        k, v.getHostName(), v.getCost(),
-                                                        v.getNextHop(), v.getUpdatePort(),
-                                                        v.getCommandPort())));
+        this.routerTable.forEach((k,v) ->{
+            if(keys.contains(k)) {
+                System.out.println(String.format(ROUTING_TABLE_OUTPUT_STRING_FORMAT,
+                        k, v.getHostName(), v.getLinkCost(), v.getBestRouteCost(),
+                        v.getNextHop(), v.getUpdatePort(),
+                        v.getCommandPort()));
+            }else{
+                System.out.println("nope");
+            }
+        });
     }
 }

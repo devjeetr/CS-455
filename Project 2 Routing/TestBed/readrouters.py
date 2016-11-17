@@ -4,8 +4,8 @@ class RouterInfo:
         self.host, self.commandport, self.updateport = host, commandport, updateport;
 
 class LinkInfo:
-    def __init__(self, cost):
-        self.cost = cost
+    def __init__(self, bestRouteCost):
+        self.bestRouteCost = bestRouteCost
         
 def readrouters(testname):
     f = open(testname+'/routers')

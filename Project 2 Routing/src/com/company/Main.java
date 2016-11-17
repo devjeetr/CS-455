@@ -13,10 +13,14 @@ public class Main {
         }
         System.out.println("Working Directory = " +
                 System.getProperty("user.dir"));
-
+        Router router;
         // Now set test directory and set router name
-        Router router = new Router(args[ROUTER_NAME_INDEX],
-                                    args[CONFIGURATION_DIRECTORY_INDEX]);
+        if(args.length > 2)
+            router = new Router(args[ROUTER_NAME_INDEX + 1],
+                                        args[CONFIGURATION_DIRECTORY_INDEX + 1], true);
+        else
+            router = new Router(args[ROUTER_NAME_INDEX],
+                    args[CONFIGURATION_DIRECTORY_INDEX], false);
 
         router.PrintRoutingTable();
 
