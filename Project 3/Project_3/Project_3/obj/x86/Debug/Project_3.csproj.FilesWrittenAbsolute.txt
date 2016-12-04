@@ -1,0 +1,5 @@
+/home/john/Desktop/CS-455/CS-455/Project 3/Project_3/Project_3/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/john/Desktop/CS-455/CS-455/Project 3/Project_3/Project_3/bin/Debug/Project_3.exe.mdb
+/home/john/Desktop/CS-455/CS-455/Project 3/Project_3/Project_3/bin/Debug/Project_3.exe
+/home/john/Desktop/CS-455/CS-455/Project 3/Project_3/Project_3/obj/x86/Debug/Project_3.exe
+/home/john/Desktop/CS-455/CS-455/Project 3/Project_3/Project_3/obj/x86/Debug/Project_3.exe.mdb
