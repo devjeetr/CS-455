@@ -1,1 +1,13 @@
-﻿<Properties StartupItem="Project_3/Project_3.csproj" />
+﻿<Properties StartupConfiguration="{34867107-04E5-4899-833C-5053740DF160}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project_3/Handler.cs">
+    <Files>
+      <File FileName="Project_3/Handler.cs" Line="11" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Project__3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
