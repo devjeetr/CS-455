@@ -12,10 +12,11 @@ namespace Project_3
 		{
 			TcpListener server = null;
 			Proxy proxy_variable = new Proxy ();
+
 			try{
 				Int32 port = 13000;
 				IPAddress localAdr = IPAddress.Parse("127.0.0.1");
-				proxy_variable.get_header();
+
 				proxy_variable.Start();
 
 			}
