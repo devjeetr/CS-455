@@ -16,6 +16,7 @@ namespace Project_3
 		const int portnumber = 8080;
 		string header = null;
 		SimpleLockThreadPool threadPool = new SimpleLockThreadPool(64, true);
+
 		public Proxy ()
 		{
 			
@@ -24,8 +25,6 @@ namespace Project_3
 		public void handler()
 		{
 			Console.WriteLine ("accepted");
-			//Console.WriteLine (header);
-
 		}
 
 		public void Start()
@@ -39,6 +38,7 @@ namespace Project_3
 			listener.Listen(BACKLOG);
 			loop_for_ever(listener);
 		}
+
 		public void loop_for_ever( Socket listener)
 		{
 			//accept the client
@@ -47,8 +47,6 @@ namespace Project_3
 
 				threadPool.QueueUserWorkItem(Handler.Handle, sock);
 			}
-
-
 		}
 
 		public void SendRequest(Socket socket, string header)
@@ -56,6 +54,7 @@ namespace Project_3
 			byte[] bytesSent = System.Text.Encoding.ASCII.GetBytes(header);
 			socket.Send(bytesSent, bytesSent.Length, SocketFlags.None);
 		}
+
 		public string get_header()
 		{
 			return header;
