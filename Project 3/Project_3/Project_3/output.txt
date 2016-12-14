@@ -1,0 +1,4255 @@
+Compilation succeeded - 3 warning(s)
+Sending:
+GET http://www.cnn.com/ HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/css/global.css HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/css/pages/page.css HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/js/cnn-header-second.min.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/cnn-header.40afdf3dfff59d6201f1-first-bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://cdn.optimizely.com/js/131788053.js HTTP/1.1
+Host: cdn.optimizely.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+If-Modified-Since: Tue, 13 Dec 2016 20:19:34 GMT
+If-None-Match: "fa88b326f3d6e8d6869e952847524a55"
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/js/cnn-analytics.min.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://z.cdn.cnn.com/analytics/cnnexpan/jsmd.min.js HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/js/cnn-footer-lib.min.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+Sending:
+GET http://static.chartbeat.com/js/chartbeat_mab.js HTTP/1.1
+Host: static.chartbeat.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/menu_tech.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/menu_bleacher.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/logo_cnn_espaniol.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/logo_cnn_arabic.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/menu_style.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/logo_cnn_nav_bottom.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/menu_politics.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/menu_money.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://www.googletagservices.com/tag/js/gpt.js HTTP/1.1
+Host: www.googletagservices.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: googletagservices.com
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+Sending:
+GET http://ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://cdn.krxd.net/controltag?confid=ITb_4eqO HTTP/1.1
+Host: cdn.krxd.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: krxd.net
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+GET http://ads.rubiconproject.comhttp/ads.rubiconproject.com/header/11078.js HTTP/1.1
+Host: ads.rubiconproject.comhttp
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: rubiconproject.comhttp
+Sending:
+GET http://z.cdn.cnn.com/analytics/cnnexpan/jsmd.min.js HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://s.ntv.io/serve/load.js HTTP/1.1
+Host: s.ntv.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: ntv.io
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/usabilla.c3c201e0ded2a1c74e7f.bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+Sending:
+GET http://data.cnn.com/1m/sp/imm.dat HTTP/1.1
+Host: data.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://c.go-mpulse.net/boomerang/3ELNE-XNZJH-GJW9A-GMCCC-HF5K6 HTTP/1.1
+Host: c.go-mpulse.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Exception resolving host address: go-mpulse.net
+Sending:
+GET http://z.cdn.cnn.com/ads/cnn/singles/cnn_homepage_rb.js HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/_homepage-zone-injection/index.html:homepage-injection-zone-1/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage4-zone-1/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage3-zone-1/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage2-zone-1/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/_homepage-zone-injection/index.html:homepage-injection-zone-2/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage1-zone-1/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://static.chartbeat.com/js/chartbeat_mab.js HTTP/1.1
+Host: static.chartbeat.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://cdn.livefyre.com/Livefyre.js HTTP/1.1
+Host: cdn.livefyre.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/weather.3e905cbfe2dad34f7db3.bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/mobile_one_tap.b3a32da2d1d44b9cee5f.bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/listexpandable.8b47c24482917295a764.bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/bundles/grid_resize.894e5f105eae2d458759.bundle.js HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/cnn/.e1mo/img/4.0/logos/logo_cnn_badge_2up.png HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.i.cdn.cnn.com/.a/1.312.0/css/pages/page.css
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/assets/video_buffer_square_blk.gif HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.i.cdn.cnn.com/.a/1.312.0/css/pages/page.css
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.i.cdn.cnn.com/.a/1.312.0/assets/sprite-chrome.png HTTP/1.1
+Host: www.i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.i.cdn.cnn.com/.a/1.312.0/css/global.css
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://widgets.outbrain.com/outbrain.js HTTP/1.1
+Host: widgets.outbrain.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://w.usabilla.com/c3244e3d16ba.js?lv=1 HTTP/1.1
+Host: w.usabilla.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: october_session=eyJpdiI6IkNjamtqNVF3V0NGWnF2SGV1dkhlZWc9PSIsInZhbHVlIjoibmx5aEwxNEIrU250Mm5ra2pUczJhZzFEMnNLbG9ocE80NVwvUEw0RVN4UjBLS09mV2FaNURFS0RLbktuajRNclppSExnandVSUg0Y293NlF3YmNjT2tRPT0iLCJtYWMiOiJlODVhM2Y2MGI0NTRlOGYwMDg4YmM1ZWRhNGRmNGZiZWJjNDUxMTM2YTMyNmU4N2ZhN2NkYTIwNjRjODVlY2U2In0%3D
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/140324101855-tombstone-foggy-graveyard-large-169.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213162857-donald-trump-cabinet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213091501-chicago-gun-violence-etyra-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://z.cdn.cnn.com/ads/cnn/cnn_homepage.js HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://widgets.outbrain.com/outbrain.js HTTP/1.1
+Host: widgets.outbrain.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i.cdn.cnn.com/ads/cnn/singles/cnn_entitlement_hp_01.js?_=1481692444443 HTTP/1.1
+Host: i.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://data.cnn.com/jsonp/breaking_news/domestic.json?callback=CNNBreakingNewsCallback HTTP/1.1
+Host: data.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213213224-alan-thicke-01-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage4-zone-3/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/section/index.html:homepage4-zone-2/views/zones/common/zone-manager.izl.json HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213162857-donald-trump-cabinet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/140324101855-tombstone-foggy-graveyard-large-169.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.cnn.com/data/ocs/container/coverageContainer/2016/06/13/tablet-web-hp-hero:*/views/containers/common/container-manager.html HTTP/1.1
+Host: www.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+X-Requested-With: XMLHttpRequest
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; _cb_ls=1; ug=5845fbfa0a38900a3c875a7e5a041d3b; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA; ugs=1; hpt=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9OZXdzX2NuLWNvbnRhaW5lci1ENUNEODBFRi02M0UwLThENEYtQzI5Qi1GODk5MDJFNzgxNkNfJ1RoZS1NdXJkZXItb2YtSm9uQmVuZXQn; hpt2=cGFnZV8xNGNvbF9ob21lcGFnZV9pbmRleF96b25lLTAtMV9iYWxhbmNlZF9jbi1jb250YWluZXItRDVDRDgwRUYtNjNFMC04RDRGLUMyOUItRjg5OTAyRTc4MTZDX2xlYWQrbGlzdDpsZWFkK2hlYWRsaW5lcw==
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213171424-trump-tweets-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213091501-chicago-gun-violence-etyra-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/140324101855-tombstone-foggy-graveyard-large-169.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213213224-alan-thicke-01-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213213224-alan-thicke-01-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161026181944-15-houston-chinatown-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213171424-trump-tweets-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213162857-donald-trump-cabinet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161024162516-slab-houston-rip-mute-dawg-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212131141-cnn-heroes-edward-norton-crowdrise-donation-appeal-00002912-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213171424-trump-tweets-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/140324101855-tombstone-foggy-graveyard-large-169.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213162857-donald-trump-cabinet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160624124929-cnnheroes-jeison-portrait-sweet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213080523-bruno-mars-james-corden-carpool-karaoke-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213171424-trump-tweets-super-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://z.cdn.cnn.com/ads/cnn/cnn_homepage.js HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://z.cdn.cnn.com/ads/cnn/singles/cnn_entitlement_hp_02.js?_=1481692444444 HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212131141-cnn-heroes-edward-norton-crowdrise-donation-appeal-00002912-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213091501-chicago-gun-violence-etyra-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+GET http://weather.api.cnn.io/graphql?query=%7BwsiForecast(locCode%3A%22USNY9472%22%2Ccelcius%3A%22false%22)%7BcurrentConditions%7Btemperature%2Cdescription%2Cicon%7D%2Clocation%7Bcity%2CstateOrCountry%7D%7D%7D HTTP/1.1
+Host: weather.api.cnn.io
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Origin: http://www.cnn.com
+Connection: keep-alive
+
+
+Exception resolving host address: cnn.io
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212143300-justine-elwood-utah-fat-shaming-1-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212112706-power-wheels-ford-mustang-kids-car-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211231337-27-cnn-heroes-1211-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212192728-07-was-1212-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213091501-chicago-gun-violence-etyra-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213143051-jennifer-lawrence-graham-norton-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213070909-obama-daily-show-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213213224-alan-thicke-01-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150707170203-france-most-beautiful--marseille-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212121643-santa-terminally-ill-child-knoxville-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212150454-best-cars-2016-jaguar-1-small-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211080856-snl-walter-white-trump-cabinet-bryan-cranston-00002609-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213155408-bodybuilder-cancer-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212204433-santa-yells-kids-texas-mall-moos-pkg-erin-00002804-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161107170005-16-texas-monthly-barbecue-favorite-spots-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/140324101855-tombstone-foggy-graveyard-large-169.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161120163539-10-instant-vacation-travel-1120-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160624124929-cnnheroes-jeison-portrait-sweet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213112803-rogue-one-jyn-erso-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161107170005-16-texas-monthly-barbecue-favorite-spots-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213201432-orangutan-baby-gift-registry-target-moos-pkg-erin-00013525-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Exception during socket.send
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213093834-colbert-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161207134536-vanishing-elephant-carcass-1-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://z.cdn.cnn.com/ads/cnn/singles/cnn_entitlement_hp_03.js?_=1481692444445 HTTP/1.1
+Host: z.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161026181944-15-houston-chinatown-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161211231337-27-cnn-heroes-1211-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.outbrain.com/?proxy-redirect=1 HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: ob_marketing_locale=default; ob_marketing_disclaimer=0; _csrf=MmfNh5S5ockTG5Ix7ADsOJ8w; obwwwroute=wwwchi2|WFDUc|WFCgV
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.outbrain.com/?proxy-redirect=1 HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: ob_marketing_locale=default; ob_marketing_disclaimer=0; _csrf=MmfNh5S5ockTG5Ix7ADsOJ8w; obwwwroute=wwwchi2|WFDUc|WFCgV
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.livefyre.com/Livefyre.js HTTP/1.1
+Host: www.livefyre.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161209231728-donald-trump-flag-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213133407-obamacare-democrats-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/150724133746-buckingham-palace-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/131025092050-01-jonbenet-ramsey-story-top.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161213162857-donald-trump-cabinet-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161212145608-flip-flop-tarek-christina-el-moussa-00005025-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160928115138-medieval-castle-made-of-trash-medium-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/161024162516-slab-houston-rip-mute-dawg-small-11.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://www.livefyre.com/Livefyre.js/ HTTP/1.1
+Host: www.livefyre.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+Sending:
+GET http://cdn.clicktale.net/www04/ptc/342da402-a44b-4b59-aba4-8fc2310e4478.js HTTP/1.1
+Host: cdn.clicktale.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://www.cnn.com/
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/cnnnext/dam/assets/160920201541-08-instant-vacation-travel-0920-large-tease.jpg HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Sending:
+GET http://i2.cdn.cnn.com/favicon.ico HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+
+Sending:
+GET http://i2.cdn.cnn.com/favicon.ico HTTP/1.1
+Host: i2.cdn.cnn.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: optimizelyEndUserId=oeu1480976659322r0.4262255022424807; CNNtosAgreed=true; countryCode=US; geoData=Pullman|WA|99163|US|NA
+Connection: keep-alive
+
+

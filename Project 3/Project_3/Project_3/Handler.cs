@@ -56,6 +56,9 @@ namespace Project_3
 					break;
 				}
 			}
+
+			Console.WriteLine("Received header: ");
+			Console.WriteLine(System.Text.Encoding.ASCII.GetString(buffer.ToArray()));
 			return buffer.ToArray();
 		}
 
@@ -86,6 +89,8 @@ namespace Project_3
 
 			Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
+			//Console.WriteLine("Header recieved: {0}", header);
+
 			var parsedHeaders = parseHeaders(header);
 			//Console.WriteLine(header);
 			if (!parsedHeaders.ContainsKey("Host")) {
@@ -94,16 +99,23 @@ namespace Project_3
 
 				return;
 			}
+
 			var url = parsedHeaders["Host"].Split('.');
 
-			var domain = String.Format("{0}.{1}", url[url.Length - 2], url[url.Length - 1]);
+			var domain = parsedHeaders["Host"].Trim();
 			IPAddress[] addresslist;
 
 			try
 			{
+
 				addresslist = Dns.GetHostAddresses(domain);
+				//Console.WriteLine("Host: |{0}|", parsedHeaders["Host"].Trim());
+				//addresslist = Dns.GetHostAddresses(parsedHeaders["Host"].Trim());
+
 			} catch (Exception){
-				Console.WriteLine("Exception");
+				Console.WriteLine(header);
+				Console.WriteLine("Exception resolving host address: {0}",
+				                 domain);
 
 				clientSocket.Close();
 				serverSocket.Close();
@@ -114,8 +126,30 @@ namespace Project_3
 			IPEndPoint remoteEP = new IPEndPoint(addresslist[0], 80);
 			clientSocket.Connect(remoteEP);
 
-			//Send Client Request to the real server
-			clientSocket.Send(bytes);
+			// replace proxy keep alive
+			if (parsedHeaders.ContainsKey("Proxy-Connection"))
+			{
+				string existingHeader = System.Text.Encoding.UTF8.GetString(bytes);
+				//Console.WriteLine("Replacing proxy-connection, with value: {0}",
+				//				  parsedHeaders["Proxy-Connection"]);
+
+				parsedHeaders.TryAdd("\nConnection", parsedHeaders["Proxy-Connection"]);
+
+				string connection = String.Format("Connection: {0}", parsedHeaders["Proxy-Connection"]);
+				var newHeader = existingHeader.Substring(0, existingHeader.Length - DOUBLE_CRLF.Length) 
+				                              + connection + DOUBLE_CRLF;
+				
+				//Send Client Request to the real server
+				clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(newHeader));
+				Console.WriteLine("Replacing");
+				Console.WriteLine("Sending:\n{0}", newHeader);
+			}
+			else { 
+				Console.WriteLine("Sending:\n{0}", System.Text.Encoding.UTF8.GetString(bytes));
+				clientSocket.Send(bytes);
+			}
+
+			//clientSocket.Send(bytes);
 
 			//Receive Response from the real server through client socket
 			byte[] clientResponse = GetHttpHeader(clientSocket);
@@ -132,13 +166,11 @@ namespace Project_3
 			else if (clientHeadersParsed.ContainsKey("Transfer-Encoding") && 
 			        clientHeadersParsed["Transfer-Encoding"].Contains("chunked"))
 			{
-				Console.WriteLine("Receiving chunks");
+				//Console.WriteLine("Receiving chunks");
 				RecieveChunks(serverSocket, clientSocket);
 
 			} else {
-				if (clientHeadersParsed.ContainsKey("Transfer-Encoding"))
-					Console.WriteLine("Transfer encoding header present:\n{0}",
-									  clientHeadersParsed.ContainsKey("Transfer-Encoding"));
+				
 				clientSocket.Close();
 				serverSocket.Close();
 				return;
@@ -158,7 +190,7 @@ namespace Project_3
 		private static string getAndSendNextChunk(Socket recieveSocket, int chunkSize, Socket sendSocket) { 
 			string header = "";
 			List<byte> buffer = new List<byte>();
-			Console.WriteLine("Receiving Chunk of size {0}", chunkSize);
+			//Console.WriteLine("Receiving Chunk of size {0}", chunkSize);
 			chunkSize += CRLF.Length;
 
 			while (chunkSize > 0)
@@ -195,7 +227,7 @@ namespace Project_3
 					
 				}
 				
-				Console.WriteLine("recving chunk size");
+				//Console.WriteLine("recving chunk size");
 
 				if (header.IndexOf(CRLF, StringComparison.Ordinal) > -1 
 				    || header.IndexOf(DOUBLE_NEWLINE, StringComparison.Ordinal) > -1)
@@ -203,7 +235,7 @@ namespace Project_3
 					break;
 				}
 			}
-			Console.WriteLine("Header: {0}", header);
+			//Console.WriteLine("Header: {0}", header);
 			int num = Int32.Parse(header, System.Globalization.NumberStyles.HexNumber);
 
 			sendSocket.Send(buffer.ToArray());
@@ -247,7 +279,7 @@ namespace Project_3
 			byte[] buffer = new byte[BUFSZ];
 
 
-			Console.WriteLine("ClientHeader:\n{0}", clientHeader);
+			//Console.WriteLine("ClientHeader:\n{0}", clientHeader);
 
 			try
 			{
@@ -255,7 +287,7 @@ namespace Project_3
 				contentLength -= receivedBytes;
 				serverSocket.Send(buffer, receivedBytes, SocketFlags.None);
 
-				Console.WriteLine("Bytes recieved: {0}", receivedBytes);
+				//Console.WriteLine("Bytes recieved: {0}", receivedBytes);
 
 				while (receivedBytes > 0 && contentLength > 0)
 				{
@@ -277,7 +309,7 @@ namespace Project_3
 		}
 
 		private void validateHTTPHeader() { 
-		
+			
 		}
 
 
