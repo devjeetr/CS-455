@@ -62,6 +62,21 @@ namespace Project_3
 			return buffer.ToArray();
 		}
 
+		public static byte[] readBytes(Socket socket, int nBytes) { 
+			List<byte> buffer = new List<byte>();
+			while (nBytes > 0)
+			{
+				byte[] bytes = new byte[1];
+				int bytesRec = socket.Receive(bytes);
+				if (bytesRec <= 0)
+					continue;
+
+				buffer.AddRange(bytes);
+				nBytes--;
+			}
+			return buffer.ToArray();
+		}
+
 		static ConcurrentDictionary<string, string> parseHeaders(string request)
 		{
 			String[] requestLines = request.Split(new String[] { CRLF },
@@ -87,11 +102,25 @@ namespace Project_3
 
 			string header = System.Text.Encoding.UTF8.GetString(bytes);
 
+			var parsedHeaders = parseHeaders(header);
+
+			// If header has POST request, read body
+			if (header.StartsWith("POST")) {
+				// need to read body and add it to bytes	
+				int bytesToRead = int.Parse(parsedHeaders["Content-Length"]);
+
+				byte[] body = readBytes(serverSocket, bytesToRead);
+				List<byte> allTheBytes = new List<byte>();
+
+				allTheBytes.AddRange(bytes);
+				allTheBytes.AddRange(body);
+				bytes = allTheBytes.ToArray();
+			}
+
+
 			Socket clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-			//Console.WriteLine("Header recieved: {0}", header);
 
-			var parsedHeaders = parseHeaders(header);
 			//Console.WriteLine(header);
 			if (!parsedHeaders.ContainsKey("Host")) {
 				clientSocket.Close();
@@ -107,11 +136,7 @@ namespace Project_3
 
 			try
 			{
-
 				addresslist = Dns.GetHostAddresses(domain);
-				//Console.WriteLine("Host: |{0}|", parsedHeaders["Host"].Trim());
-				//addresslist = Dns.GetHostAddresses(parsedHeaders["Host"].Trim());
-
 			} catch (Exception){
 				Console.WriteLine(header);
 				Console.WriteLine("Exception resolving host address: {0}",
@@ -157,6 +182,7 @@ namespace Project_3
 
 			var clientHeadersParsed = parseHeaders(header);
 			SendRequest(serverSocket, header);
+
 
 			if (clientHeadersParsed.ContainsKey("Content-Length"))
 			{
@@ -226,8 +252,6 @@ namespace Project_3
 				
 					
 				}
-				
-				//Console.WriteLine("recving chunk size");
 
 				if (header.IndexOf(CRLF, StringComparison.Ordinal) > -1 
 				    || header.IndexOf(DOUBLE_NEWLINE, StringComparison.Ordinal) > -1)
@@ -278,9 +302,6 @@ namespace Project_3
 			const int BUFSZ = 1024;
 			byte[] buffer = new byte[BUFSZ];
 
-
-			//Console.WriteLine("ClientHeader:\n{0}", clientHeader);
-
 			try
 			{
 				receivedBytes = clientSocket.Receive(buffer);
@@ -309,7 +330,6 @@ namespace Project_3
 		}
 
 		private void validateHTTPHeader() { 
-			
 		}
 
 
